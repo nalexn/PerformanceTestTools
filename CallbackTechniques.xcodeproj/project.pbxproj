@@ -15,6 +15,10 @@
 		F6AF87B61E3E4DD300CA1E3B /* NotificationCenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AF87B51E3E4DD300CA1E3B /* NotificationCenterTests.swift */; };
 		F6AF87B91E3E4DE400CA1E3B /* NotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AF87B81E3E4DE400CA1E3B /* NotificationCenter.m */; };
 		F6AF87BB1E3E4DF600CA1E3B /* NotificationCenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AF87BA1E3E4DF600CA1E3B /* NotificationCenterTests.m */; };
+		F6ED6F2B1E3E53BC00431442 /* Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ED6F2A1E3E53BC00431442 /* Closure.swift */; };
+		F6ED6F2D1E3E53C900431442 /* ClosureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ED6F2C1E3E53C900431442 /* ClosureTests.swift */; };
+		F6ED6F301E3E540300431442 /* Block.m in Sources */ = {isa = PBXBuildFile; fileRef = F6ED6F2F1E3E540300431442 /* Block.m */; };
+		F6ED6F321E3E541800431442 /* BlockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6ED6F311E3E541800431442 /* BlockTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,11 @@
 		F6AF87B71E3E4DE400CA1E3B /* NotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationCenter.h; sourceTree = "<group>"; };
 		F6AF87B81E3E4DE400CA1E3B /* NotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationCenter.m; sourceTree = "<group>"; };
 		F6AF87BA1E3E4DF600CA1E3B /* NotificationCenterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationCenterTests.m; sourceTree = "<group>"; };
+		F6ED6F2A1E3E53BC00431442 /* Closure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Closure.swift; sourceTree = "<group>"; };
+		F6ED6F2C1E3E53C900431442 /* ClosureTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosureTests.swift; sourceTree = "<group>"; };
+		F6ED6F2E1E3E540300431442 /* Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Block.h; sourceTree = "<group>"; };
+		F6ED6F2F1E3E540300431442 /* Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Block.m; sourceTree = "<group>"; };
+		F6ED6F311E3E541800431442 /* BlockTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +76,7 @@
 			children = (
 				F6AF87A31E3E452B00CA1E3B /* Delegate */,
 				F6AF87B01E3E4D9A00CA1E3B /* NotificationCenter */,
+				F6ED6F271E3E538500431442 /* Closure(Block) */,
 			);
 			path = CallbackTechniquesTests;
 			sourceTree = "<group>";
@@ -134,6 +144,34 @@
 				F6AF87B71E3E4DE400CA1E3B /* NotificationCenter.h */,
 				F6AF87B81E3E4DE400CA1E3B /* NotificationCenter.m */,
 				F6AF87BA1E3E4DF600CA1E3B /* NotificationCenterTests.m */,
+			);
+			name = "Objective-C";
+			sourceTree = "<group>";
+		};
+		F6ED6F271E3E538500431442 /* Closure(Block) */ = {
+			isa = PBXGroup;
+			children = (
+				F6ED6F281E3E539A00431442 /* Swift */,
+				F6ED6F291E3E53A000431442 /* Objective-C */,
+			);
+			path = "Closure(Block)";
+			sourceTree = "<group>";
+		};
+		F6ED6F281E3E539A00431442 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				F6ED6F2A1E3E53BC00431442 /* Closure.swift */,
+				F6ED6F2C1E3E53C900431442 /* ClosureTests.swift */,
+			);
+			name = Swift;
+			sourceTree = "<group>";
+		};
+		F6ED6F291E3E53A000431442 /* Objective-C */ = {
+			isa = PBXGroup;
+			children = (
+				F6ED6F2E1E3E540300431442 /* Block.h */,
+				F6ED6F2F1E3E540300431442 /* Block.m */,
+				F6ED6F311E3E541800431442 /* BlockTests.m */,
 			);
 			name = "Objective-C";
 			sourceTree = "<group>";
@@ -209,10 +247,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6AF87AE1E3E458B00CA1E3B /* DelegateTests.swift in Sources */,
+				F6ED6F321E3E541800431442 /* BlockTests.m in Sources */,
+				F6ED6F301E3E540300431442 /* Block.m in Sources */,
 				F6AF87A81E3E452B00CA1E3B /* Delegate.swift in Sources */,
 				F6AF87B41E3E4DC400CA1E3B /* NotificationCenter.swift in Sources */,
 				F6AF87A71E3E452B00CA1E3B /* Delegate.m in Sources */,
 				F6AF87B91E3E4DE400CA1E3B /* NotificationCenter.m in Sources */,
+				F6ED6F2D1E3E53C900431442 /* ClosureTests.swift in Sources */,
+				F6ED6F2B1E3E53BC00431442 /* Closure.swift in Sources */,
 				F6AF87AA1E3E456100CA1E3B /* DelegateTests.m in Sources */,
 				F6AF87B61E3E4DD300CA1E3B /* NotificationCenterTests.swift in Sources */,
 				F6AF87BB1E3E4DF600CA1E3B /* NotificationCenterTests.m in Sources */,
@@ -365,6 +407,7 @@
 				F6AF87941E3E3C3700CA1E3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
