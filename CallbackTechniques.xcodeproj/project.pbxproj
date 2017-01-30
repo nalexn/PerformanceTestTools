@@ -22,6 +22,10 @@
 		F6E6EF451E3F74A3007A139C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E6EF441E3F74A3007A139C /* AppDelegate.swift */; };
 		F6E6EF581E3F7FE8007A139C /* Responder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E6EF571E3F7FE8007A139C /* Responder.swift */; };
 		F6E6EF5A1E3F7FF5007A139C /* ResponderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E6EF591E3F7FF5007A139C /* ResponderTests.swift */; };
+		F6E6EF601E3F851F007A139C /* KeyValueObserving.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E6EF5F1E3F851F007A139C /* KeyValueObserving.m */; };
+		F6E6EF621E3F852A007A139C /* KeyValueObservingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E6EF611E3F852A007A139C /* KeyValueObservingTests.m */; };
+		F6E6EF651E3F87A8007A139C /* KeyValueObserving.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E6EF641E3F87A8007A139C /* KeyValueObserving.swift */; };
+		F6E6EF671E3F87BD007A139C /* KeyValueObservingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E6EF661E3F87BD007A139C /* KeyValueObservingTests.swift */; };
 		F6ED6F2B1E3E53BC00431442 /* Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ED6F2A1E3E53BC00431442 /* Closure.swift */; };
 		F6ED6F2D1E3E53C900431442 /* ClosureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ED6F2C1E3E53C900431442 /* ClosureTests.swift */; };
 		F6ED6F301E3E540300431442 /* Block.m in Sources */ = {isa = PBXBuildFile; fileRef = F6ED6F2F1E3E540300431442 /* Block.m */; };
@@ -64,6 +68,11 @@
 		F6E6EF501E3F74A3007A139C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6E6EF571E3F7FE8007A139C /* Responder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Responder.swift; sourceTree = "<group>"; };
 		F6E6EF591E3F7FF5007A139C /* ResponderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponderTests.swift; sourceTree = "<group>"; };
+		F6E6EF5E1E3F851F007A139C /* KeyValueObserving.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyValueObserving.h; sourceTree = "<group>"; };
+		F6E6EF5F1E3F851F007A139C /* KeyValueObserving.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyValueObserving.m; sourceTree = "<group>"; };
+		F6E6EF611E3F852A007A139C /* KeyValueObservingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyValueObservingTests.m; sourceTree = "<group>"; };
+		F6E6EF641E3F87A8007A139C /* KeyValueObserving.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyValueObserving.swift; sourceTree = "<group>"; };
+		F6E6EF661E3F87BD007A139C /* KeyValueObservingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyValueObservingTests.swift; sourceTree = "<group>"; };
 		F6ED6F2A1E3E53BC00431442 /* Closure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Closure.swift; sourceTree = "<group>"; };
 		F6ED6F2C1E3E53C900431442 /* ClosureTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosureTests.swift; sourceTree = "<group>"; };
 		F6ED6F2E1E3E540300431442 /* Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Block.h; sourceTree = "<group>"; };
@@ -116,6 +125,7 @@
 				F6ED6F271E3E538500431442 /* Closure(Block) */,
 				F6E6EF121E3F5A21007A139C /* Invocation */,
 				F6E6EF1A1E3F6B55007A139C /* Responder */,
+				F6E6EF5C1E3F84E1007A139C /* KeyValueObserving */,
 			);
 			path = CallbackTechniquesTests;
 			sourceTree = "<group>";
@@ -238,6 +248,34 @@
 			children = (
 				F6E6EF571E3F7FE8007A139C /* Responder.swift */,
 				F6E6EF591E3F7FF5007A139C /* ResponderTests.swift */,
+			);
+			name = Swift;
+			sourceTree = "<group>";
+		};
+		F6E6EF5C1E3F84E1007A139C /* KeyValueObserving */ = {
+			isa = PBXGroup;
+			children = (
+				F6E6EF631E3F8797007A139C /* Swift */,
+				F6E6EF5D1E3F84E7007A139C /* Objective-C */,
+			);
+			path = KeyValueObserving;
+			sourceTree = "<group>";
+		};
+		F6E6EF5D1E3F84E7007A139C /* Objective-C */ = {
+			isa = PBXGroup;
+			children = (
+				F6E6EF5E1E3F851F007A139C /* KeyValueObserving.h */,
+				F6E6EF5F1E3F851F007A139C /* KeyValueObserving.m */,
+				F6E6EF611E3F852A007A139C /* KeyValueObservingTests.m */,
+			);
+			name = "Objective-C";
+			sourceTree = "<group>";
+		};
+		F6E6EF631E3F8797007A139C /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				F6E6EF641E3F87A8007A139C /* KeyValueObserving.swift */,
+				F6E6EF661E3F87BD007A139C /* KeyValueObservingTests.swift */,
 			);
 			name = Swift;
 			sourceTree = "<group>";
@@ -376,12 +414,16 @@
 				F6E6EF5A1E3F7FF5007A139C /* ResponderTests.swift in Sources */,
 				F6E6EF581E3F7FE8007A139C /* Responder.swift in Sources */,
 				F6ED6F301E3E540300431442 /* Block.m in Sources */,
+				F6E6EF671E3F87BD007A139C /* KeyValueObservingTests.swift in Sources */,
 				F6AF87A81E3E452B00CA1E3B /* Delegate.swift in Sources */,
 				F6AF87B41E3E4DC400CA1E3B /* NotificationCenter.swift in Sources */,
+				F6E6EF621E3F852A007A139C /* KeyValueObservingTests.m in Sources */,
 				F6AF87A71E3E452B00CA1E3B /* Delegate.m in Sources */,
 				F6AF87B91E3E4DE400CA1E3B /* NotificationCenter.m in Sources */,
 				F6ED6F2D1E3E53C900431442 /* ClosureTests.swift in Sources */,
+				F6E6EF651E3F87A8007A139C /* KeyValueObserving.swift in Sources */,
 				F6E6EF201E3F6B82007A139C /* Responder.m in Sources */,
+				F6E6EF601E3F851F007A139C /* KeyValueObserving.m in Sources */,
 				F6E6EF1C1E3F6B66007A139C /* ResponderTests.m in Sources */,
 				F6E6EF161E3F5A42007A139C /* Invocation.m in Sources */,
 				F6E6EF181E3F5A55007A139C /* InvocationTests.m in Sources */,
