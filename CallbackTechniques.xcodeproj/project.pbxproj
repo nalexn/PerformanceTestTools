@@ -19,11 +19,22 @@
 		F6E6EF181E3F5A55007A139C /* InvocationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E6EF171E3F5A55007A139C /* InvocationTests.m */; };
 		F6E6EF1C1E3F6B66007A139C /* ResponderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E6EF1B1E3F6B66007A139C /* ResponderTests.m */; };
 		F6E6EF201E3F6B82007A139C /* Responder.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E6EF1F1E3F6B82007A139C /* Responder.m */; };
+		F6E6EF451E3F74A3007A139C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E6EF441E3F74A3007A139C /* AppDelegate.swift */; };
 		F6ED6F2B1E3E53BC00431442 /* Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ED6F2A1E3E53BC00431442 /* Closure.swift */; };
 		F6ED6F2D1E3E53C900431442 /* ClosureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ED6F2C1E3E53C900431442 /* ClosureTests.swift */; };
 		F6ED6F301E3E540300431442 /* Block.m in Sources */ = {isa = PBXBuildFile; fileRef = F6ED6F2F1E3E540300431442 /* Block.m */; };
 		F6ED6F321E3E541800431442 /* BlockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6ED6F311E3E541800431442 /* BlockTests.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F6E6EF541E3F7542007A139C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6AF876A1E3E3C3600CA1E3B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F6E6EF411E3F74A3007A139C;
+			remoteInfo = CallbackTechniques;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		F6AF87861E3E3C3700CA1E3B /* CallbackTechniquesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CallbackTechniquesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +57,9 @@
 		F6E6EF1B1E3F6B66007A139C /* ResponderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponderTests.m; sourceTree = "<group>"; };
 		F6E6EF1E1E3F6B82007A139C /* Responder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Responder.h; sourceTree = "<group>"; };
 		F6E6EF1F1E3F6B82007A139C /* Responder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Responder.m; sourceTree = "<group>"; };
+		F6E6EF421E3F74A3007A139C /* CallbackTechniques.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CallbackTechniques.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6E6EF441E3F74A3007A139C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F6E6EF501E3F74A3007A139C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6ED6F2A1E3E53BC00431442 /* Closure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Closure.swift; sourceTree = "<group>"; };
 		F6ED6F2C1E3E53C900431442 /* ClosureTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosureTests.swift; sourceTree = "<group>"; };
 		F6ED6F2E1E3E540300431442 /* Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Block.h; sourceTree = "<group>"; };
@@ -61,6 +75,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F6E6EF3F1E3F74A3007A139C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -69,6 +90,7 @@
 			children = (
 				F6AF87891E3E3C3700CA1E3B /* CallbackTechniquesTests */,
 				F6AF879A1E3E3F2E00CA1E3B /* Info.plist and headers */,
+				F6E6EF431E3F74A3007A139C /* CallbackTechniques */,
 				F6AF87731E3E3C3700CA1E3B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -77,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				F6AF87861E3E3C3700CA1E3B /* CallbackTechniquesTests.xctest */,
+				F6E6EF421E3F74A3007A139C /* CallbackTechniques.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -196,6 +219,15 @@
 			name = "Objective-C";
 			sourceTree = "<group>";
 		};
+		F6E6EF431E3F74A3007A139C /* CallbackTechniques */ = {
+			isa = PBXGroup;
+			children = (
+				F6E6EF441E3F74A3007A139C /* AppDelegate.swift */,
+				F6E6EF501E3F74A3007A139C /* Info.plist */,
+			);
+			path = CallbackTechniques;
+			sourceTree = "<group>";
+		};
 		F6ED6F271E3E538500431442 /* Closure(Block) */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,11 +270,29 @@
 			buildRules = (
 			);
 			dependencies = (
+				F6E6EF551E3F7542007A139C /* PBXTargetDependency */,
 			);
 			name = CallbackTechniquesTests;
 			productName = CallbackTechniquesTests;
 			productReference = F6AF87861E3E3C3700CA1E3B /* CallbackTechniquesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F6E6EF411E3F74A3007A139C /* CallbackTechniques */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6E6EF531E3F74A3007A139C /* Build configuration list for PBXNativeTarget "CallbackTechniques" */;
+			buildPhases = (
+				F6E6EF3E1E3F74A3007A139C /* Sources */,
+				F6E6EF3F1E3F74A3007A139C /* Frameworks */,
+				F6E6EF401E3F74A3007A139C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CallbackTechniques;
+			productName = CallbackTechniques;
+			productReference = F6E6EF421E3F74A3007A139C /* CallbackTechniques.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -257,6 +307,11 @@
 					F6AF87851E3E3C3700CA1E3B = {
 						CreatedOnToolsVersion = 8.2.1;
 						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F6E6EF411E3F74A3007A139C;
+					};
+					F6E6EF411E3F74A3007A139C = {
+						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -275,12 +330,20 @@
 			projectRoot = "";
 			targets = (
 				F6AF87851E3E3C3700CA1E3B /* CallbackTechniquesTests */,
+				F6E6EF411E3F74A3007A139C /* CallbackTechniques */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		F6AF87841E3E3C3700CA1E3B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6E6EF401E3F74A3007A139C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -313,7 +376,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F6E6EF3E1E3F74A3007A139C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6E6EF451E3F74A3007A139C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F6E6EF551E3F7542007A139C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F6E6EF411E3F74A3007A139C /* CallbackTechniques */;
+			targetProxy = F6E6EF541E3F7542007A139C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		F6AF878D1E3E3C3700CA1E3B /* Debug */ = {
@@ -423,6 +502,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "CallbackTechniquesTests/CallbackTechniquesTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CallbackTechniques.app/CallbackTechniques";
 			};
 			name = Debug;
 		};
@@ -436,6 +516,33 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Alexey-Naumov.CallbackTechniquesTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "CallbackTechniquesTests/CallbackTechniquesTests-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CallbackTechniques.app/CallbackTechniques";
+			};
+			name = Release;
+		};
+		F6E6EF511E3F74A3007A139C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = CallbackTechniques/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Alexey-Naumov.CallbackTechniques";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		F6E6EF521E3F74A3007A139C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				INFOPLIST_FILE = CallbackTechniques/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Alexey-Naumov.CallbackTechniques";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -460,6 +567,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		F6E6EF531E3F74A3007A139C /* Build configuration list for PBXNativeTarget "CallbackTechniques" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6E6EF511E3F74A3007A139C /* Debug */,
+				F6E6EF521E3F74A3007A139C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
