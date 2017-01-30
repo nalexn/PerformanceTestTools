@@ -73,6 +73,7 @@
 		F6E6EF611E3F852A007A139C /* KeyValueObservingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyValueObservingTests.m; sourceTree = "<group>"; };
 		F6E6EF641E3F87A8007A139C /* KeyValueObserving.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyValueObserving.swift; sourceTree = "<group>"; };
 		F6E6EF661E3F87BD007A139C /* KeyValueObservingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyValueObservingTests.swift; sourceTree = "<group>"; };
+		F6E6EF681E3F8DF5007A139C /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		F6ED6F2A1E3E53BC00431442 /* Closure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Closure.swift; sourceTree = "<group>"; };
 		F6ED6F2C1E3E53C900431442 /* ClosureTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosureTests.swift; sourceTree = "<group>"; };
 		F6ED6F2E1E3E540300431442 /* Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Block.h; sourceTree = "<group>"; };
@@ -135,6 +136,7 @@
 			children = (
 				F6AF87971E3E3F1800CA1E3B /* CallbackTechniquesTests-Bridging-Header.h */,
 				F6AF87AF1E3E48C600CA1E3B /* CallbackTechniquesTests-Prefix.pch */,
+				F6E6EF681E3F8DF5007A139C /* Constants.h */,
 				F6AF878C1E3E3C3700CA1E3B /* Info.plist */,
 			);
 			name = "Info.plist and headers";

@@ -37,7 +37,7 @@
 
 - (void)testPerformance {
   [self measureBlock:^{
-    [self.caller changeValue];
+    _repeat(million_times, ^{ [self.caller changeValue]; });
   }];
 }
 

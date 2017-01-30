@@ -26,7 +26,7 @@ class SwiftDelegateTests: XCTestCase {
   
   func testPerformance() {
     self.measure {
-      self.caller.callDelegate()
+      _repeat(million_times, { _ in self.caller.callDelegate() })
     }
   }
 }

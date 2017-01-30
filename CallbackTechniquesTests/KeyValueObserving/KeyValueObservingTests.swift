@@ -31,7 +31,7 @@ class SwiftKeyValueObservingTests: XCTestCase {
   
   func testPerformanceExample() {
     self.measure {
-      self.caller.changeValue()
+      _repeat(million_times, { _ in self.caller.changeValue() })
     }
   }
 }

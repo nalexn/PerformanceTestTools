@@ -32,7 +32,7 @@
 
 - (void)testPerformance {
   [self measureBlock:^{
-    [self.caller callDelegate];
+    _repeat(million_times, ^{ [self.caller callDelegate]; });
   }];
 }
 
