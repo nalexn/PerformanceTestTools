@@ -15,6 +15,8 @@
 		F6AF87B61E3E4DD300CA1E3B /* NotificationCenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AF87B51E3E4DD300CA1E3B /* NotificationCenterTests.swift */; };
 		F6AF87B91E3E4DE400CA1E3B /* NotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AF87B81E3E4DE400CA1E3B /* NotificationCenter.m */; };
 		F6AF87BB1E3E4DF600CA1E3B /* NotificationCenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AF87BA1E3E4DF600CA1E3B /* NotificationCenterTests.m */; };
+		F6E6EF161E3F5A42007A139C /* Invocation.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E6EF151E3F5A42007A139C /* Invocation.m */; };
+		F6E6EF181E3F5A55007A139C /* InvocationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E6EF171E3F5A55007A139C /* InvocationTests.m */; };
 		F6ED6F2B1E3E53BC00431442 /* Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ED6F2A1E3E53BC00431442 /* Closure.swift */; };
 		F6ED6F2D1E3E53C900431442 /* ClosureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ED6F2C1E3E53C900431442 /* ClosureTests.swift */; };
 		F6ED6F301E3E540300431442 /* Block.m in Sources */ = {isa = PBXBuildFile; fileRef = F6ED6F2F1E3E540300431442 /* Block.m */; };
@@ -36,6 +38,9 @@
 		F6AF87B71E3E4DE400CA1E3B /* NotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationCenter.h; sourceTree = "<group>"; };
 		F6AF87B81E3E4DE400CA1E3B /* NotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationCenter.m; sourceTree = "<group>"; };
 		F6AF87BA1E3E4DF600CA1E3B /* NotificationCenterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationCenterTests.m; sourceTree = "<group>"; };
+		F6E6EF141E3F5A42007A139C /* Invocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Invocation.h; sourceTree = "<group>"; };
+		F6E6EF151E3F5A42007A139C /* Invocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Invocation.m; sourceTree = "<group>"; };
+		F6E6EF171E3F5A55007A139C /* InvocationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvocationTests.m; sourceTree = "<group>"; };
 		F6ED6F2A1E3E53BC00431442 /* Closure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Closure.swift; sourceTree = "<group>"; };
 		F6ED6F2C1E3E53C900431442 /* ClosureTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosureTests.swift; sourceTree = "<group>"; };
 		F6ED6F2E1E3E540300431442 /* Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Block.h; sourceTree = "<group>"; };
@@ -77,6 +82,7 @@
 				F6AF87A31E3E452B00CA1E3B /* Delegate */,
 				F6AF87B01E3E4D9A00CA1E3B /* NotificationCenter */,
 				F6ED6F271E3E538500431442 /* Closure(Block) */,
+				F6E6EF121E3F5A21007A139C /* Invocation */,
 			);
 			path = CallbackTechniquesTests;
 			sourceTree = "<group>";
@@ -144,6 +150,24 @@
 				F6AF87B71E3E4DE400CA1E3B /* NotificationCenter.h */,
 				F6AF87B81E3E4DE400CA1E3B /* NotificationCenter.m */,
 				F6AF87BA1E3E4DF600CA1E3B /* NotificationCenterTests.m */,
+			);
+			name = "Objective-C";
+			sourceTree = "<group>";
+		};
+		F6E6EF121E3F5A21007A139C /* Invocation */ = {
+			isa = PBXGroup;
+			children = (
+				F6E6EF131E3F5A29007A139C /* Objective-C */,
+			);
+			path = Invocation;
+			sourceTree = "<group>";
+		};
+		F6E6EF131E3F5A29007A139C /* Objective-C */ = {
+			isa = PBXGroup;
+			children = (
+				F6E6EF141E3F5A42007A139C /* Invocation.h */,
+				F6E6EF151E3F5A42007A139C /* Invocation.m */,
+				F6E6EF171E3F5A55007A139C /* InvocationTests.m */,
 			);
 			name = "Objective-C";
 			sourceTree = "<group>";
@@ -254,6 +278,8 @@
 				F6AF87A71E3E452B00CA1E3B /* Delegate.m in Sources */,
 				F6AF87B91E3E4DE400CA1E3B /* NotificationCenter.m in Sources */,
 				F6ED6F2D1E3E53C900431442 /* ClosureTests.swift in Sources */,
+				F6E6EF161E3F5A42007A139C /* Invocation.m in Sources */,
+				F6E6EF181E3F5A55007A139C /* InvocationTests.m in Sources */,
 				F6ED6F2B1E3E53BC00431442 /* Closure.swift in Sources */,
 				F6AF87AA1E3E456100CA1E3B /* DelegateTests.m in Sources */,
 				F6AF87B61E3E4DD300CA1E3B /* NotificationCenterTests.swift in Sources */,
