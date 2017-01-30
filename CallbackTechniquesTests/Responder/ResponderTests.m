@@ -8,14 +8,14 @@
 
 #import "Responder.h"
 
-@interface ResponderTests : XCTestCase
+@interface ObjCResponderTests : XCTestCase
 
 @property (nonatomic, strong) ObjCResponderCallee *callee;
 @property (nonatomic, strong) ObjCResponderCaller *caller;
 
 @end
 
-@implementation ResponderTests
+@implementation ObjCResponderTests
 
 - (void)setUp {
   [super setUp];

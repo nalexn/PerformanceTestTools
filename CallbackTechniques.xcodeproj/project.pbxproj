@@ -20,6 +20,8 @@
 		F6E6EF1C1E3F6B66007A139C /* ResponderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E6EF1B1E3F6B66007A139C /* ResponderTests.m */; };
 		F6E6EF201E3F6B82007A139C /* Responder.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E6EF1F1E3F6B82007A139C /* Responder.m */; };
 		F6E6EF451E3F74A3007A139C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E6EF441E3F74A3007A139C /* AppDelegate.swift */; };
+		F6E6EF581E3F7FE8007A139C /* Responder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E6EF571E3F7FE8007A139C /* Responder.swift */; };
+		F6E6EF5A1E3F7FF5007A139C /* ResponderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E6EF591E3F7FF5007A139C /* ResponderTests.swift */; };
 		F6ED6F2B1E3E53BC00431442 /* Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ED6F2A1E3E53BC00431442 /* Closure.swift */; };
 		F6ED6F2D1E3E53C900431442 /* ClosureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ED6F2C1E3E53C900431442 /* ClosureTests.swift */; };
 		F6ED6F301E3E540300431442 /* Block.m in Sources */ = {isa = PBXBuildFile; fileRef = F6ED6F2F1E3E540300431442 /* Block.m */; };
@@ -60,6 +62,8 @@
 		F6E6EF421E3F74A3007A139C /* CallbackTechniques.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CallbackTechniques.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6E6EF441E3F74A3007A139C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6E6EF501E3F74A3007A139C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6E6EF571E3F7FE8007A139C /* Responder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Responder.swift; sourceTree = "<group>"; };
+		F6E6EF591E3F7FF5007A139C /* ResponderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponderTests.swift; sourceTree = "<group>"; };
 		F6ED6F2A1E3E53BC00431442 /* Closure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Closure.swift; sourceTree = "<group>"; };
 		F6ED6F2C1E3E53C900431442 /* ClosureTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosureTests.swift; sourceTree = "<group>"; };
 		F6ED6F2E1E3E540300431442 /* Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Block.h; sourceTree = "<group>"; };
@@ -204,6 +208,7 @@
 		F6E6EF1A1E3F6B55007A139C /* Responder */ = {
 			isa = PBXGroup;
 			children = (
+				F6E6EF561E3F7FD8007A139C /* Swift */,
 				F6E6EF1D1E3F6B6A007A139C /* Objective-C */,
 			);
 			path = Responder;
@@ -226,6 +231,15 @@
 				F6E6EF501E3F74A3007A139C /* Info.plist */,
 			);
 			path = CallbackTechniques;
+			sourceTree = "<group>";
+		};
+		F6E6EF561E3F7FD8007A139C /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				F6E6EF571E3F7FE8007A139C /* Responder.swift */,
+				F6E6EF591E3F7FF5007A139C /* ResponderTests.swift */,
+			);
+			name = Swift;
 			sourceTree = "<group>";
 		};
 		F6ED6F271E3E538500431442 /* Closure(Block) */ = {
@@ -359,6 +373,8 @@
 			files = (
 				F6AF87AE1E3E458B00CA1E3B /* DelegateTests.swift in Sources */,
 				F6ED6F321E3E541800431442 /* BlockTests.m in Sources */,
+				F6E6EF5A1E3F7FF5007A139C /* ResponderTests.swift in Sources */,
+				F6E6EF581E3F7FE8007A139C /* Responder.swift in Sources */,
 				F6ED6F301E3E540300431442 /* Block.m in Sources */,
 				F6AF87A81E3E452B00CA1E3B /* Delegate.swift in Sources */,
 				F6AF87B41E3E4DC400CA1E3B /* NotificationCenter.swift in Sources */,
