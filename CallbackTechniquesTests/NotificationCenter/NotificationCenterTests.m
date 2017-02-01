@@ -37,7 +37,7 @@
 
 - (void)testPerformance {
   [self measureBlock:^{
-    _repeat(million_times, ^{ [self.caller postNotification]; });
+    repeat(number_of_iterations, [self.caller postNotification]);
   }];
 }
 

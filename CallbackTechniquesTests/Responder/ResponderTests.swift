@@ -26,7 +26,9 @@ class SwiftResponderTests: XCTestCase {
   
   func testPerformanceExample() {
     self.measure {
-      _repeat(million_times, { _ in self.caller.triggerResponderChain() })
+      for _ in 0 ..< number_of_iterations {
+        self.caller.triggerResponderChain()
+      }
     }
   }
 }

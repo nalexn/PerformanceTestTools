@@ -32,7 +32,7 @@
 
 - (void)testPerformance {
   [self measureBlock:^{
-    _repeat(million_times, ^{ [self.caller triggerResponderChain]; });
+    repeat(number_of_iterations, [self.caller triggerResponderChain]);
   }];
 }
 

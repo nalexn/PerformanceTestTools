@@ -26,7 +26,9 @@ class SwiftClosureTests: XCTestCase {
   
   func testPerformanceExample() {
     self.measure {
-      _repeat(million_times, { _ in self.caller.performClosure() })
+      for _ in 0 ..< number_of_iterations {
+        self.caller.performClosure()
+      }
     }
   }
 }

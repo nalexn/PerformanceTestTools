@@ -6,11 +6,6 @@
 //  Copyright © 2017 Alexey Naumov. All rights reserved.
 //
 
-#define thousand_times     1000l
-#define million_times      1000000l
+#define number_of_iterations      1000000l
 
-static inline void _repeat(long iterations, void(^block)()) {
-  for (long i = 0; i < iterations; ++i) {
-    block();
-  }
-}
+#define repeat(iterations, code)      for (long i = 0; i < iterations; ++i) { code; }

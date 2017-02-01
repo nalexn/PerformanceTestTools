@@ -24,9 +24,17 @@ class SwiftDelegateTests: XCTestCase {
     XCTAssertTrue(callee.wasCalled)
   }
   
+  func srepeat(iterations: Int, code: @autoclosure () -> Void) {
+    for _ in 0 ..< iterations {
+      code()
+    }
+  }
+  
   func testPerformance() {
     self.measure {
-      _repeat(million_times, { _ in self.caller.callDelegate() })
+      for _ in 0 ..< number_of_iterations {
+        self.caller.callDelegate()
+      }
     }
   }
 }

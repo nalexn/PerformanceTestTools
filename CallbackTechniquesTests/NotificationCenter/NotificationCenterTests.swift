@@ -31,7 +31,9 @@ class SwiftNotificationCenterTests: XCTestCase {
   
   func testPerformanceExample() {
     self.measure {
-      _repeat(million_times, { _ in self.caller.postNotification() })
+      for _ in 0 ..< number_of_iterations {
+        self.caller.postNotification()
+      }
     }
   }
 }
