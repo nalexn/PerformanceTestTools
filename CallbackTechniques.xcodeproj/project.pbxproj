@@ -30,6 +30,9 @@
 		F6ED6F2D1E3E53C900431442 /* ClosureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ED6F2C1E3E53C900431442 /* ClosureTests.swift */; };
 		F6ED6F301E3E540300431442 /* Block.m in Sources */ = {isa = PBXBuildFile; fileRef = F6ED6F2F1E3E540300431442 /* Block.m */; };
 		F6ED6F321E3E541800431442 /* BlockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6ED6F311E3E541800431442 /* BlockTests.m */; };
+		F6F1157C1E41D5580014AA00 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F115791E41D5580014AA00 /* PromiseKit.framework */; };
+		F6F1157D1E41D5580014AA00 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F1157A1E41D5580014AA00 /* ReactiveSwift.framework */; };
+		F6F1157E1E41D5580014AA00 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F1157B1E41D5580014AA00 /* Result.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +82,9 @@
 		F6ED6F2E1E3E540300431442 /* Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Block.h; sourceTree = "<group>"; };
 		F6ED6F2F1E3E540300431442 /* Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Block.m; sourceTree = "<group>"; };
 		F6ED6F311E3E541800431442 /* BlockTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockTests.m; sourceTree = "<group>"; };
+		F6F115791E41D5580014AA00 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
+		F6F1157A1E41D5580014AA00 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
+		F6F1157B1E41D5580014AA00 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6F1157C1E41D5580014AA00 /* PromiseKit.framework in Frameworks */,
+				F6F1157D1E41D5580014AA00 /* ReactiveSwift.framework in Frameworks */,
+				F6F1157E1E41D5580014AA00 /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +115,7 @@
 				F6AF879A1E3E3F2E00CA1E3B /* Info.plist and headers */,
 				F6E6EF431E3F74A3007A139C /* CallbackTechniques */,
 				F6AF87731E3E3C3700CA1E3B /* Products */,
+				F6F115781E41D5580014AA00 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -308,6 +318,16 @@
 				F6ED6F311E3E541800431442 /* BlockTests.m */,
 			);
 			name = "Objective-C";
+			sourceTree = "<group>";
+		};
+		F6F115781E41D5580014AA00 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F6F115791E41D5580014AA00 /* PromiseKit.framework */,
+				F6F1157A1E41D5580014AA00 /* ReactiveSwift.framework */,
+				F6F1157B1E41D5580014AA00 /* Result.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -555,6 +575,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = CallbackTechniquesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Alexey-Naumov.CallbackTechniquesTests";
@@ -571,6 +595,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = CallbackTechniquesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Alexey-Naumov.CallbackTechniquesTests";
@@ -635,6 +663,7 @@
 				F6E6EF521E3F74A3007A139C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
