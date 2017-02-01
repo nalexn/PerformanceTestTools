@@ -33,6 +33,11 @@
 		F6F1157C1E41D5580014AA00 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F115791E41D5580014AA00 /* PromiseKit.framework */; };
 		F6F1157D1E41D5580014AA00 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F1157A1E41D5580014AA00 /* ReactiveSwift.framework */; };
 		F6F1157E1E41D5580014AA00 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F1157B1E41D5580014AA00 /* Result.framework */; };
+		F6F115821E41D8430014AA00 /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F115811E41D8430014AA00 /* Promise.swift */; };
+		F6F115841E41D8530014AA00 /* PromiseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F115831E41D8530014AA00 /* PromiseTests.swift */; };
+		F6F115861E41EF690014AA00 /* PromiseKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F6F115791E41D5580014AA00 /* PromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F6F115871E41EF690014AA00 /* ReactiveSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F6F1157A1E41D5580014AA00 /* ReactiveSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F6F115881E41EF690014AA00 /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F6F1157B1E41D5580014AA00 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,21 @@
 			remoteInfo = CallbackTechniques;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F6F115851E41EF5C0014AA00 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F6F115861E41EF690014AA00 /* PromiseKit.framework in CopyFiles */,
+				F6F115871E41EF690014AA00 /* ReactiveSwift.framework in CopyFiles */,
+				F6F115881E41EF690014AA00 /* Result.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F6AF87861E3E3C3700CA1E3B /* CallbackTechniquesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CallbackTechniquesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,6 +105,8 @@
 		F6F115791E41D5580014AA00 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
 		F6F1157A1E41D5580014AA00 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
 		F6F1157B1E41D5580014AA00 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		F6F115811E41D8430014AA00 /* Promise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Promise.swift; sourceTree = "<group>"; };
+		F6F115831E41D8530014AA00 /* PromiseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromiseTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +159,7 @@
 				F6E6EF121E3F5A21007A139C /* Invocation */,
 				F6E6EF1A1E3F6B55007A139C /* Responder */,
 				F6E6EF5C1E3F84E1007A139C /* KeyValueObserving */,
+				F6F1157F1E41D8260014AA00 /* Promise */,
 			);
 			path = CallbackTechniquesTests;
 			sourceTree = "<group>";
@@ -330,6 +353,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F6F1157F1E41D8260014AA00 /* Promise */ = {
+			isa = PBXGroup;
+			children = (
+				F6F115801E41D8300014AA00 /* Swift */,
+			);
+			path = Promise;
+			sourceTree = "<group>";
+		};
+		F6F115801E41D8300014AA00 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				F6F115811E41D8430014AA00 /* Promise.swift */,
+				F6F115831E41D8530014AA00 /* PromiseTests.swift */,
+			);
+			name = Swift;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -340,6 +380,7 @@
 				F6AF87821E3E3C3700CA1E3B /* Sources */,
 				F6AF87831E3E3C3700CA1E3B /* Frameworks */,
 				F6AF87841E3E3C3700CA1E3B /* Resources */,
+				F6F115851E41EF5C0014AA00 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -432,6 +473,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6AF87AE1E3E458B00CA1E3B /* DelegateTests.swift in Sources */,
+				F6F115821E41D8430014AA00 /* Promise.swift in Sources */,
 				F6ED6F321E3E541800431442 /* BlockTests.m in Sources */,
 				F6E6EF5A1E3F7FF5007A139C /* ResponderTests.swift in Sources */,
 				F6E6EF581E3F7FE8007A139C /* Responder.swift in Sources */,
@@ -445,6 +487,7 @@
 				F6ED6F2D1E3E53C900431442 /* ClosureTests.swift in Sources */,
 				F6E6EF651E3F87A8007A139C /* KeyValueObserving.swift in Sources */,
 				F6E6EF201E3F6B82007A139C /* Responder.m in Sources */,
+				F6F115841E41D8530014AA00 /* PromiseTests.swift in Sources */,
 				F6E6EF601E3F851F007A139C /* KeyValueObserving.m in Sources */,
 				F6E6EF1C1E3F6B66007A139C /* ResponderTests.m in Sources */,
 				F6E6EF161E3F5A42007A139C /* Invocation.m in Sources */,
