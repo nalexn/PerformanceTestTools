@@ -9,29 +9,121 @@
 import Darwin
 
 typealias VoidClosure = () -> Void
-typealias SetupClosure = () -> (test: VoidClosure, tearDown: VoidClosure?)
+typealias VoidCallback = (VoidClosure) -> Void
+typealias SyncTestClosure = () -> (test: VoidClosure, tearDown: VoidClosure?)
+typealias AsyncTestClosure = () -> (test: VoidCallback, tearDown: VoidClosure?)
+typealias PerformanceTestConstructor = () -> PerformanceTest
 
-func measurePerformance(_ iterations: Int, setup: SetupClosure) -> Timer {
-  var timer = Timer()
-  for _ in 0 ..< iterations {
-    let (test, tearDown) = setup()
-    timer.start()
-    test()
-    timer.stop()
-    tearDown?()
+// MARK: PerformanceTestQueue
+
+class PerformanceTestQueue {
+  
+  private var queue = [PerformanceTestConstructor]()
+  private var completion: VoidClosure?
+  
+  func enqueue(constructor: @escaping PerformanceTestConstructor) -> Self {
+    queue.append(constructor)
+    if queue.count == 1 {
+      performNextPerformanceTest()
+    }
+    return self
   }
-  return timer
+  
+  func finally(completion: @escaping VoidClosure) {
+    self.completion = completion
+    DispatchQueue.main.async {
+      if self.queue.count == 0 {
+        self.handleEndOfQueue()
+      }
+    }
+  }
+  
+  private func performNextPerformanceTest() {
+    guard let constructor = queue.first else {
+      handleEndOfQueue()
+      return
+    }
+    let test = constructor()
+    test.completion = { _ in
+      _ = self.queue.remove(at: 0)
+      DispatchQueue.main.async(execute: self.performNextPerformanceTest)
+    }
+  }
+  
+  private func handleEndOfQueue() {
+    completion?()
+    self.completion = nil
+  }
 }
 
-func print(subject: Any, _ measurements: Timer) {
-  let className = String(describing: subject)
-  let nanosec = measurements.averageTimeInNanoseconds
-  let millisec = TimeInterval(nanosec) / 1_000_000
-  print("\(className) average time: \(nanosec)ns (\(millisec)ms)")
+// MARK: PerformanceTest
+
+class PerformanceTest {
+  private let iterations: Int
+  private let subject: Any
+  private var timer = Timer()
+  private var didFinish = false
+  fileprivate var completion: VoidClosure? {
+    didSet {
+      if didFinish, let completion = completion {
+        DispatchQueue.main.async(execute: completion)
+      }
+    }
+  }
+  
+  init(subject: Any, iterations: Int) {
+    self.iterations = iterations
+    self.subject = subject
+  }
+  
+  func launch(syncTest: SyncTestClosure) -> Self {
+    for _ in 0 ..< iterations {
+      let (test, tearDown) = syncTest()
+      timer.start()
+      test()
+      timer.stop()
+      tearDown?()
+    }
+    didFinish = true
+    if let completion = completion {
+      DispatchQueue.main.async(execute: completion)
+    }
+    return self
+  }
+  
+  func launch(asyncTest: @escaping AsyncTestClosure) -> Self {
+    return launch(iteration: 0, asyncTest: asyncTest)
+  }
+  
+  private func launch(iteration: Int, asyncTest: @escaping AsyncTestClosure) -> Self {
+    guard iteration < iterations else {
+      didFinish = true
+      completion?()
+      return self
+    }
+    let (test, tearDown) = asyncTest()
+    timer.start()
+    test {
+      self.timer.stop()
+      tearDown?()
+      DispatchQueue.main.async {
+        _ = self.launch(iteration: iteration + 1, asyncTest: asyncTest)
+      }
+    }
+    return self
+  }
+  
+  func printResults() -> Self {
+    let nanosec = timer.averageTimeInNanoseconds
+    let millisec = TimeInterval(nanosec) / 1_000_000
+    print("\(subject) average time: \(nanosec)ns (\(millisec)ms)")
+    return self
+  }
 }
+
+// MARK: Timer
 
 struct Timer {
-  
   private static var baseInfo: mach_timebase_info = mach_timebase_info(numer: 0, denom: 0)
   private var startTime: UInt64 = 0
   private var cumulativeTime: UInt64 = 0
@@ -52,11 +144,5 @@ struct Timer {
   
   var averageTimeInNanoseconds: UInt64 {
     return cumulativeTime / UInt64(numberOfStarts) * UInt64(Timer.baseInfo.numer) / UInt64(Timer.baseInfo.denom)
-  }
-}
-
-extension Timer {
-  func printResults(subject: Any) {
-    print(subject: subject, self)
   }
 }
