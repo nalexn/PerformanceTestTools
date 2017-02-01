@@ -36,10 +36,4 @@
   XCTAssertTrue(self.callee.wasCalled);
 }
 
-- (void)testPerformance {
-  [self measureBlock:^{
-    repeat(number_of_iterations, [self.caller invoke]);
-  }];
-}
-
 @end

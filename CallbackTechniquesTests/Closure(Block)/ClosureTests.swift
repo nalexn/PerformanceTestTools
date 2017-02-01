@@ -23,12 +23,4 @@ class SwiftClosureTests: XCTestCase {
     caller.performClosure()
     XCTAssertTrue(callee.wasCalled)
   }
-  
-  func testPerformanceExample() {
-    self.measure {
-      for _ in 0 ..< number_of_iterations {
-        self.caller.performClosure()
-      }
-    }
-  }
 }

@@ -28,25 +28,4 @@ class SwiftPromiseTests: XCTestCase {
       }
     }
   }
-  
-  func testPerformanceExample() {
-    
-    let testExpectation = expectation(description: "for loop completion")
-    let promise = caller.givePromise()
-    var startTime = TimeInterval(0)
-    _ = promise.then { () -> Void in
-      let elapsedTime = CACurrentMediaTime() - startTime
-      self.measure {
-        Thread.sleep(forTimeInterval: elapsedTime)
-      }
-      testExpectation.fulfill()
-    }
-    startTime = CACurrentMediaTime()
-    caller.fulfillPromise()
-    waitForExpectations(timeout: 1.0) { (error) in
-      if let error = error {
-        XCTFail(error.localizedDescription)
-      }
-    }
-  }
 }

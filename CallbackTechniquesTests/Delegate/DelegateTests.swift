@@ -23,18 +23,4 @@ class SwiftDelegateTests: XCTestCase {
     caller.callDelegate()
     XCTAssertTrue(callee.wasCalled)
   }
-  
-  func srepeat(iterations: Int, code: @autoclosure () -> Void) {
-    for _ in 0 ..< iterations {
-      code()
-    }
-  }
-  
-  func testPerformance() {
-    self.measure {
-      for _ in 0 ..< number_of_iterations {
-        self.caller.callDelegate()
-      }
-    }
-  }
 }
