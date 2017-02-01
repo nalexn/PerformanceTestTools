@@ -38,6 +38,8 @@
 		F6F115861E41EF690014AA00 /* PromiseKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F6F115791E41D5580014AA00 /* PromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F6F115871E41EF690014AA00 /* ReactiveSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F6F1157A1E41D5580014AA00 /* ReactiveSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F6F115881E41EF690014AA00 /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F6F1157B1E41D5580014AA00 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F6F1158B1E4216C10014AA00 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F1158A1E4216C10014AA00 /* Tools.swift */; };
+		F6F1158D1E422A540014AA00 /* PerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F1158C1E422A540014AA00 /* PerformanceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +109,8 @@
 		F6F1157B1E41D5580014AA00 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		F6F115811E41D8430014AA00 /* Promise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Promise.swift; sourceTree = "<group>"; };
 		F6F115831E41D8530014AA00 /* PromiseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromiseTests.swift; sourceTree = "<group>"; };
+		F6F1158A1E4216C10014AA00 /* Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
+		F6F1158C1E422A540014AA00 /* PerformanceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformanceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				F6AF87891E3E3C3700CA1E3B /* CallbackTechniquesTests */,
+				F6F115891E4216AC0014AA00 /* PerformanceTests */,
 				F6AF879A1E3E3F2E00CA1E3B /* Info.plist and headers */,
 				F6E6EF431E3F74A3007A139C /* CallbackTechniques */,
 				F6AF87731E3E3C3700CA1E3B /* Products */,
@@ -370,6 +375,16 @@
 			name = Swift;
 			sourceTree = "<group>";
 		};
+		F6F115891E4216AC0014AA00 /* PerformanceTests */ = {
+			isa = PBXGroup;
+			children = (
+				F6F1158A1E4216C10014AA00 /* Tools.swift */,
+				F6F1158C1E422A540014AA00 /* PerformanceTests.swift */,
+			);
+			name = PerformanceTests;
+			path = CallbackTechniquesTests/PerformanceTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -479,6 +494,7 @@
 				F6E6EF581E3F7FE8007A139C /* Responder.swift in Sources */,
 				F6ED6F301E3E540300431442 /* Block.m in Sources */,
 				F6E6EF671E3F87BD007A139C /* KeyValueObservingTests.swift in Sources */,
+				F6F1158B1E4216C10014AA00 /* Tools.swift in Sources */,
 				F6AF87A81E3E452B00CA1E3B /* Delegate.swift in Sources */,
 				F6AF87B41E3E4DC400CA1E3B /* NotificationCenter.swift in Sources */,
 				F6E6EF621E3F852A007A139C /* KeyValueObservingTests.m in Sources */,
@@ -487,6 +503,7 @@
 				F6ED6F2D1E3E53C900431442 /* ClosureTests.swift in Sources */,
 				F6E6EF651E3F87A8007A139C /* KeyValueObserving.swift in Sources */,
 				F6E6EF201E3F6B82007A139C /* Responder.m in Sources */,
+				F6F1158D1E422A540014AA00 /* PerformanceTests.swift in Sources */,
 				F6F115841E41D8530014AA00 /* PromiseTests.swift in Sources */,
 				F6E6EF601E3F851F007A139C /* KeyValueObserving.m in Sources */,
 				F6E6EF1C1E3F6B66007A139C /* ResponderTests.m in Sources */,
