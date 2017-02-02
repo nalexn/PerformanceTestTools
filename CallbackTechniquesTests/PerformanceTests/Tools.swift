@@ -10,7 +10,7 @@ import Darwin
 
 typealias VoidClosure = () -> Void
 typealias RunSyncTestClosure = VoidClosure
-typealias RunAsyncTestClosure = (_ completion: VoidClosure) -> Void
+typealias RunAsyncTestClosure = (_ completion: @escaping VoidClosure) -> Void
 typealias TearDownClosure = VoidClosure
 
 typealias SyncTestSetup = () -> RunSyncTestClosure
@@ -51,6 +51,7 @@ class PerformanceTestQueue {
     }
     let test = constructor()
     test.completion = { _ in
+      test.printResults()
       _ = self.queue.remove(at: 0)
       DispatchQueue.main.async(execute: self.performNextPerformanceTest)
     }
@@ -131,11 +132,10 @@ class PerformanceTest {
     return self
   }
   
-  func printResults() -> Self {
+  func printResults() {
     let nanosec = timer.averageTimeInNanoseconds
     let millisec = TimeInterval(nanosec) / 1_000_000
     print("\(subject) average time: \(nanosec)ns (\(millisec)ms)")
-    return self
   }
 }
 
