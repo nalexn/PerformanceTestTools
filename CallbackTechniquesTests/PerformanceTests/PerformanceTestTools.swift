@@ -18,19 +18,14 @@ typealias SyncTestSetupWithTearDown = () -> (test: RunSyncTestClosure, tearDown:
 typealias AsyncTestSetup = () -> RunAsyncTestClosure
 typealias AsyncTestSetupWithTearDown = () -> (test: RunAsyncTestClosure, tearDown: TearDownClosure)
 
-typealias PerformanceTestConstructor = (_ iterations: Int) -> PerformanceTest
+typealias PerformanceTestConstructor = () -> PerformanceTest
 
 // MARK: PerformanceTestQueue
 
 class PerformanceTestQueue {
   
-  private let iterations: Int
   private var queue = [PerformanceTestConstructor]()
   private var completion: VoidClosure?
-  
-  init(iterations: Int) {
-    self.iterations = iterations
-  }
   
   func enqueue(constructor: @escaping PerformanceTestConstructor) -> Self {
     queue.append(constructor)
@@ -54,7 +49,7 @@ class PerformanceTestQueue {
       handleEndOfQueue()
       return
     }
-    let test = constructor(self.iterations)
+    let test = constructor()
     test.completion = { _ in
       test.printResults()
       _ = self.queue.remove(at: 0)
@@ -166,6 +161,9 @@ fileprivate struct Timer {
   }
   
   var averageTimeInNanoseconds: UInt64 {
+    guard numberOfStarts > 0 else {
+      return 0
+    }
     return cumulativeTime / UInt64(numberOfStarts) * UInt64(Timer.baseInfo.numer) / UInt64(Timer.baseInfo.denom)
   }
 }
