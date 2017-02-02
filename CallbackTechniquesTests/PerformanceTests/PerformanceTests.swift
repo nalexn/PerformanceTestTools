@@ -13,7 +13,7 @@ class PerformanceTests: XCTestCase {
     
     let queueExpectation = expectation(description: "Queue expectation")
     
-    PerformanceTestQueue()
+    PerformanceTestQueue(iterations: 1000)
       .measurePerformanceOfDelegate()
       .measurePerformanceOfNotificationCenter()
       .measurePerformanceOfClosureAndBlock()
@@ -35,16 +35,12 @@ class PerformanceTests: XCTestCase {
 
 extension PerformanceTestQueue {
   
-  var iterations: Int {
-    return 1000
-  }
-  
   // MARK: - Delegate
   
   func measurePerformanceOfDelegate() -> PerformanceTestQueue {
     return self
-      .enqueue { () -> PerformanceTest in
-        return PerformanceTest(subject: "[Swift: Delegate]", iterations: self.iterations)
+      .enqueue { (iterations) -> PerformanceTest in
+        return PerformanceTest(subject: "[Swift: Delegate]", iterations: iterations)
           .launch { () -> RunSyncTestClosure in
             let callee = SwiftDelegateCallee()
             let caller = SwiftDelegateCaller()
@@ -54,8 +50,8 @@ extension PerformanceTestQueue {
             }
           }
       }
-      .enqueue { () -> PerformanceTest in
-        return PerformanceTest(subject: "[Obj-C: Delegate]", iterations: self.iterations)
+      .enqueue { (iterations) -> PerformanceTest in
+        return PerformanceTest(subject: "[Obj-C: Delegate]", iterations: iterations)
           .launch { () -> RunSyncTestClosure in
             let callee = ObjCDelegateCallee()
             let caller = ObjCDelegateCaller()
@@ -71,8 +67,8 @@ extension PerformanceTestQueue {
   
   func measurePerformanceOfNotificationCenter() -> PerformanceTestQueue {
     return self
-      .enqueue { () -> PerformanceTest in
-        return PerformanceTest(subject: "[Swift: NotificationCenter]", iterations: self.iterations)
+      .enqueue { (iterations) -> PerformanceTest in
+        return PerformanceTest(subject: "[Swift: NotificationCenter]", iterations: iterations)
           .launch { () -> (test: RunSyncTestClosure, tearDown: TearDownClosure) in
             let callee = SwiftNotificationCenterCallee()
             let caller = SwiftNotificationCenterCaller()
@@ -86,8 +82,8 @@ extension PerformanceTestQueue {
             return (test: test, tearDown: tearDown)
           }
       }
-      .enqueue { () -> PerformanceTest in
-        return PerformanceTest(subject: "[Obj-C: NotificationCenter]", iterations: self.iterations)
+      .enqueue { (iterations) -> PerformanceTest in
+        return PerformanceTest(subject: "[Obj-C: NotificationCenter]", iterations: iterations)
           .launch { () -> (test: RunSyncTestClosure, tearDown: TearDownClosure) in
             let callee = ObjCNotificationCenterCallee()
             let caller = ObjCNotificationCenterCaller()
@@ -107,8 +103,8 @@ extension PerformanceTestQueue {
   
   func measurePerformanceOfClosureAndBlock() -> PerformanceTestQueue {
     return self
-      .enqueue { () -> PerformanceTest in
-        return PerformanceTest(subject: "[Swift: Closure]", iterations: self.iterations)
+      .enqueue { (iterations) -> PerformanceTest in
+        return PerformanceTest(subject: "[Swift: Closure]", iterations: iterations)
           .launch { () -> RunSyncTestClosure in
             let callee = SwiftClosureCallee()
             let caller = SwiftClosureCaller()
@@ -118,8 +114,8 @@ extension PerformanceTestQueue {
             }
           }
       }
-      .enqueue { () -> PerformanceTest in
-        return PerformanceTest(subject: "[Obj-C: Block]", iterations: self.iterations)
+      .enqueue { (iterations) -> PerformanceTest in
+        return PerformanceTest(subject: "[Obj-C: Block]", iterations: iterations)
           .launch { () -> RunSyncTestClosure in
             let callee = ObjCBlockCallee()
             let caller = ObjCBlockCaller()
@@ -136,8 +132,8 @@ extension PerformanceTestQueue {
   func measurePerformanceOfInvocation() -> PerformanceTestQueue {
     
     return self
-      .enqueue { () -> PerformanceTest in
-        return PerformanceTest(subject: "[Obj-C: Invocation]", iterations: self.iterations)
+      .enqueue { (iterations) -> PerformanceTest in
+        return PerformanceTest(subject: "[Obj-C: Invocation]", iterations: iterations)
           .launch { () -> RunSyncTestClosure in
             let callee = ObjCInvocationCallee()
             let caller = ObjCInvocationCaller()
@@ -153,8 +149,8 @@ extension PerformanceTestQueue {
   
   func measurePerformanceOfResponder() -> PerformanceTestQueue {
     return self
-      .enqueue { () -> PerformanceTest in
-        return PerformanceTest(subject: "[Swift: Responder]", iterations: self.iterations)
+      .enqueue { (iterations) -> PerformanceTest in
+        return PerformanceTest(subject: "[Swift: Responder]", iterations: iterations)
           .launch { () -> RunSyncTestClosure in
             let callee = SwiftResponderCallee()
             let caller = SwiftResponderCaller()
@@ -164,8 +160,8 @@ extension PerformanceTestQueue {
             }
           }
       }
-      .enqueue { () -> PerformanceTest in
-        return PerformanceTest(subject: "[Obj-C: Responder]", iterations: self.iterations)
+      .enqueue { (iterations) -> PerformanceTest in
+        return PerformanceTest(subject: "[Obj-C: Responder]", iterations: iterations)
           .launch { () -> RunSyncTestClosure in
             let callee = ObjCResponderCallee()
             let caller = ObjCResponderCaller()
@@ -181,8 +177,8 @@ extension PerformanceTestQueue {
   
   func measurePerformanceOfKeyValueObserving() -> PerformanceTestQueue {
     return self
-      .enqueue { () -> PerformanceTest in
-        return PerformanceTest(subject: "[Swift: KeyValueObserving]", iterations: self.iterations)
+      .enqueue { (iterations) -> PerformanceTest in
+        return PerformanceTest(subject: "[Swift: KeyValueObserving]", iterations: iterations)
           .launch { () -> (test: RunSyncTestClosure, tearDown: TearDownClosure) in
             let callee = SwiftKeyValueObservingCallee()
             let caller = SwiftKeyValueObservingCaller()
@@ -196,8 +192,8 @@ extension PerformanceTestQueue {
             return (test: test, tearDown: tearDown)
           }
       }
-      .enqueue { () -> PerformanceTest in
-        return PerformanceTest(subject: "[Obj-C: KeyValueObserving]", iterations: self.iterations)
+      .enqueue { (iterations) -> PerformanceTest in
+        return PerformanceTest(subject: "[Obj-C: KeyValueObserving]", iterations: iterations)
           .launch { () -> (test: RunSyncTestClosure, tearDown: TearDownClosure) in
             let callee = ObjCKeyValueObservingCallee()
             let caller = ObjCKeyValueObservingCaller()
@@ -215,8 +211,8 @@ extension PerformanceTestQueue {
   
   func measurePerformanceOfPromise() -> PerformanceTestQueue {
     return self
-      .enqueue { () -> PerformanceTest in
-        return PerformanceTest(subject: "[Swift: Promise]", iterations: self.iterations)
+      .enqueue { (iterations) -> PerformanceTest in
+        return PerformanceTest(subject: "[Swift: Promise]", iterations: iterations)
           .launch { () -> RunAsyncTestClosure in
             let caller = SwiftPromiseCaller()
             var promiseFulfillment: VoidClosure!

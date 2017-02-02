@@ -1,5 +1,5 @@
 //
-//  Tools.swift
+//  PerformanceTestTools.swift
 //  CallbackTechniques
 //
 //  Created by Alexey Naumov on 01/02/2017.
@@ -18,14 +18,19 @@ typealias SyncTestSetupWithTearDown = () -> (test: RunSyncTestClosure, tearDown:
 typealias AsyncTestSetup = () -> RunAsyncTestClosure
 typealias AsyncTestSetupWithTearDown = () -> (test: RunAsyncTestClosure, tearDown: TearDownClosure)
 
-typealias PerformanceTestConstructor = () -> PerformanceTest
+typealias PerformanceTestConstructor = (_ iterations: Int) -> PerformanceTest
 
 // MARK: PerformanceTestQueue
 
 class PerformanceTestQueue {
   
+  private let iterations: Int
   private var queue = [PerformanceTestConstructor]()
   private var completion: VoidClosure?
+  
+  init(iterations: Int) {
+    self.iterations = iterations
+  }
   
   func enqueue(constructor: @escaping PerformanceTestConstructor) -> Self {
     queue.append(constructor)
@@ -49,7 +54,7 @@ class PerformanceTestQueue {
       handleEndOfQueue()
       return
     }
-    let test = constructor()
+    let test = constructor(self.iterations)
     test.completion = { _ in
       test.printResults()
       _ = self.queue.remove(at: 0)
@@ -141,7 +146,7 @@ class PerformanceTest {
 
 // MARK: Timer
 
-struct Timer {
+fileprivate struct Timer {
   private static var baseInfo: mach_timebase_info = mach_timebase_info(numer: 0, denom: 0)
   private var startTime: UInt64 = 0
   private var cumulativeTime: UInt64 = 0
