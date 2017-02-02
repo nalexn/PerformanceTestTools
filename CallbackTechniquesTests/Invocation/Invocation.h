@@ -18,6 +18,7 @@
 
 @property (nonatomic) BOOL wasCalled;
 
-- (void)invocationHandler;
+- (void)addToCaller:(ObjCInvocationCaller *)caller;
+- (void)removeFromCaller:(ObjCInvocationCaller *)caller;
 
 @end

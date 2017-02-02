@@ -45,6 +45,16 @@
 
 @implementation ObjCInvocationCallee
 
+- (void)addToCaller:(ObjCInvocationCaller *)caller
+{
+  [caller setTarget:self selector:@selector(invocationHandler)];
+}
+
+- (void)removeFromCaller:(ObjCInvocationCaller *)caller
+{
+  [caller removeTarget];
+}
+
 - (void)invocationHandler
 {
   self.wasCalled = YES;

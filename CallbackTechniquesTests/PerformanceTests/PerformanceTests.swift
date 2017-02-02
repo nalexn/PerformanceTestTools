@@ -134,13 +134,17 @@ extension PerformanceTestQueue {
     return self
       .enqueue { (iterations) -> PerformanceTest in
         return PerformanceTest(subject: "[Obj-C: Invocation]", iterations: iterations)
-          .launch { () -> RunSyncTestClosure in
+          .launch { () -> (test: RunSyncTestClosure, tearDown: TearDownClosure) in
             let callee = ObjCInvocationCallee()
             let caller = ObjCInvocationCaller()
-            caller.setTarget(callee, selector: #selector(ObjCInvocationCallee.invocationHandler))
-            return { _ in
-//              caller.invoke()
+            callee.add(to: caller)
+            let test: RunSyncTestClosure = { _ in
+              caller.invoke()
             }
+            let tearDown: TearDownClosure = { _ in
+              callee.remove(from: caller)
+            }
+            return (test: test, tearDown: tearDown)
           }
       }
   }

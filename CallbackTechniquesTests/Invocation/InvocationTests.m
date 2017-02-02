@@ -21,12 +21,12 @@
   [super setUp];
   self.callee = [ObjCInvocationCallee new];
   self.caller = [ObjCInvocationCaller new];
-  [self.caller setTarget:self.callee selector:@selector(invocationHandler)];
+  [self.callee addToCaller:self.caller];
 }
 
 - (void)tearDown
 {
-  [self.caller removeTarget];
+  [self.callee removeFromCaller:self.caller];
   [super tearDown];
 }
 
