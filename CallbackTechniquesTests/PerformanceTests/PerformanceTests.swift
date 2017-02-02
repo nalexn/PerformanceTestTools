@@ -44,27 +44,25 @@ extension PerformanceTestQueue {
     return self
       .enqueue { () -> PerformanceTest in
         return PerformanceTest(subject: "[Swift: Delegate]", iterations: self.iterations)
-          .launch { () -> (test: VoidClosure, tearDown: VoidClosure?) in
+          .launch { () -> RunSyncTestClosure in
             let callee = SwiftDelegateCallee()
             let caller = SwiftDelegateCaller()
             caller.delegate = callee
-            let test: VoidClosure = { _ in
+            return { _ in
               caller.callDelegate()
             }
-            return (test: test, tearDown: nil)
           }
           .printResults()
       }
       .enqueue { () -> PerformanceTest in
         return PerformanceTest(subject: "[Obj-C: Delegate]", iterations: self.iterations)
-          .launch { () -> (test: VoidClosure, tearDown: VoidClosure?) in
+          .launch { () -> RunSyncTestClosure in
             let callee = ObjCDelegateCallee()
             let caller = ObjCDelegateCaller()
             caller.delegate = callee
-            let test: VoidClosure = { _ in
+            return { _ in
               caller.callDelegate()
             }
-            return (test: test, tearDown: nil)
           }
           .printResults()
       }
@@ -76,7 +74,7 @@ extension PerformanceTestQueue {
     return self
       .enqueue { () -> PerformanceTest in
         return PerformanceTest(subject: "[Swift: NotificationCenter]", iterations: self.iterations)
-          .launch { () -> (test: VoidClosure, tearDown: VoidClosure?) in
+          .launch { () -> (test: RunSyncTestClosure, tearDown: TearDownClosure) in
             let callee = SwiftNotificationCenterCallee()
             let caller = SwiftNotificationCenterCaller()
             callee.subscribe()
@@ -92,7 +90,7 @@ extension PerformanceTestQueue {
       }
       .enqueue { () -> PerformanceTest in
         return PerformanceTest(subject: "[Obj-C: NotificationCenter]", iterations: self.iterations)
-          .launch { () -> (test: VoidClosure, tearDown: VoidClosure?) in
+          .launch { () -> (test: RunSyncTestClosure, tearDown: TearDownClosure) in
             let callee = ObjCNotificationCenterCallee()
             let caller = ObjCNotificationCenterCaller()
             callee.subscribe()
@@ -114,27 +112,25 @@ extension PerformanceTestQueue {
     return self
       .enqueue { () -> PerformanceTest in
         return PerformanceTest(subject: "[Swift: Closure]", iterations: self.iterations)
-          .launch { () -> (test: VoidClosure, tearDown: VoidClosure?) in
+          .launch { () -> RunSyncTestClosure in
             let callee = SwiftClosureCallee()
             let caller = SwiftClosureCaller()
             caller.closure = callee.callback()
-            let test: VoidClosure = { _ in
+            return { _ in
               caller.performClosure()
             }
-            return (test: test, tearDown: nil)
           }
           .printResults()
       }
       .enqueue { () -> PerformanceTest in
         return PerformanceTest(subject: "[Obj-C: Block]", iterations: self.iterations)
-          .launch { () -> (test: VoidClosure, tearDown: VoidClosure?) in
+          .launch { () -> RunSyncTestClosure in
             let callee = ObjCBlockCallee()
             let caller = ObjCBlockCaller()
             caller.block = callee.callback()
-            let test: VoidClosure = { _ in
+            return { _ in
               caller.callBlock()
             }
-            return (test: test, tearDown: nil)
           }
           .printResults()
       }
@@ -147,14 +143,13 @@ extension PerformanceTestQueue {
     return self
       .enqueue { () -> PerformanceTest in
         return PerformanceTest(subject: "[Obj-C: Invocation]", iterations: self.iterations)
-          .launch { () -> (test: VoidClosure, tearDown: VoidClosure?) in
+          .launch { () -> RunSyncTestClosure in
             let callee = ObjCInvocationCallee()
             let caller = ObjCInvocationCaller()
             caller.setTarget(callee, selector: #selector(ObjCInvocationCallee.invocationHandler))
-            let test: VoidClosure = { _ in
+            return { _ in
 //              caller.invoke()
             }
-            return (test: test, tearDown: nil)
           }
           .printResults()
       }
@@ -166,27 +161,25 @@ extension PerformanceTestQueue {
     return self
       .enqueue { () -> PerformanceTest in
         return PerformanceTest(subject: "[Swift: Responder]", iterations: self.iterations)
-          .launch { () -> (test: VoidClosure, tearDown: VoidClosure?) in
+          .launch { () -> RunSyncTestClosure in
             let callee = SwiftResponderCallee()
             let caller = SwiftResponderCaller()
             callee.addSubview(caller)
-            let test: VoidClosure = { _ in
+            return { _ in
               caller.triggerResponderChain()
             }
-            return (test: test, tearDown: nil)
           }
           .printResults()
       }
       .enqueue { () -> PerformanceTest in
         return PerformanceTest(subject: "[Obj-C: Responder]", iterations: self.iterations)
-          .launch { () -> (test: VoidClosure, tearDown: VoidClosure?) in
+          .launch { () -> RunSyncTestClosure in
             let callee = ObjCResponderCallee()
             let caller = ObjCResponderCaller()
             callee.addSubview(caller)
-            let test: VoidClosure = { _ in
+            return { _ in
               caller.triggerResponderChain()
             }
-            return (test: test, tearDown: nil)
           }
           .printResults()
       }
@@ -198,7 +191,7 @@ extension PerformanceTestQueue {
     return self
       .enqueue { () -> PerformanceTest in
         return PerformanceTest(subject: "[Swift: KeyValueObserving]", iterations: self.iterations)
-          .launch { () -> (test: VoidClosure, tearDown: VoidClosure?) in
+          .launch { () -> (test: RunSyncTestClosure, tearDown: TearDownClosure) in
             let callee = SwiftKeyValueObservingCallee()
             let caller = SwiftKeyValueObservingCaller()
             callee.startObserving(object: caller)
@@ -214,7 +207,7 @@ extension PerformanceTestQueue {
       }
       .enqueue { () -> PerformanceTest in
         return PerformanceTest(subject: "[Obj-C: KeyValueObserving]", iterations: self.iterations)
-          .launch { () -> (test: VoidClosure, tearDown: VoidClosure?) in
+          .launch { () -> (test: RunSyncTestClosure, tearDown: TearDownClosure) in
             let callee = ObjCKeyValueObservingCallee()
             let caller = ObjCKeyValueObservingCaller()
             callee.startObserving(caller)

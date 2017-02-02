@@ -9,9 +9,15 @@
 import Darwin
 
 typealias VoidClosure = () -> Void
-typealias VoidCallback = (VoidClosure) -> Void
-typealias SyncTestClosure = () -> (test: VoidClosure, tearDown: VoidClosure?)
-typealias AsyncTestClosure = () -> (test: VoidCallback, tearDown: VoidClosure?)
+typealias RunSyncTestClosure = VoidClosure
+typealias RunAsyncTestClosure = (_ completion: VoidClosure) -> Void
+typealias TearDownClosure = VoidClosure
+
+typealias SyncTestSetup = () -> RunSyncTestClosure
+typealias SyncTestSetupWithTearDown = () -> (test: RunSyncTestClosure, tearDown: TearDownClosure)
+typealias AsyncTestSetup = () -> RunAsyncTestClosure
+typealias AsyncTestSetupWithTearDown = () -> (test: RunAsyncTestClosure, tearDown: TearDownClosure)
+
 typealias PerformanceTestConstructor = () -> PerformanceTest
 
 // MARK: PerformanceTestQueue
@@ -76,13 +82,19 @@ class PerformanceTest {
     self.subject = subject
   }
   
-  func launch(syncTest: SyncTestClosure) -> Self {
+  func launch(syncTest: @escaping SyncTestSetup) -> Self {
+    return launch(syncTest: { _ in
+      return (test: syncTest(), tearDown: { _ in })
+    })
+  }
+  
+  func launch(syncTest: SyncTestSetupWithTearDown) -> Self {
     for _ in 0 ..< iterations {
       let (test, tearDown) = syncTest()
       timer.start()
       test()
       timer.stop()
-      tearDown?()
+      tearDown()
     }
     didFinish = true
     if let completion = completion {
@@ -91,11 +103,17 @@ class PerformanceTest {
     return self
   }
   
-  func launch(asyncTest: @escaping AsyncTestClosure) -> Self {
+  func launch(asyncTest: @escaping AsyncTestSetup) -> Self {
+    return launch(asyncTest: { _ in
+      return (test: asyncTest(), tearDown: { _ in })
+    })
+  }
+  
+  func launch(asyncTest: @escaping AsyncTestSetupWithTearDown) -> Self {
     return launch(iteration: 0, asyncTest: asyncTest)
   }
   
-  private func launch(iteration: Int, asyncTest: @escaping AsyncTestClosure) -> Self {
+  private func launch(iteration: Int, asyncTest: @escaping AsyncTestSetupWithTearDown) -> Self {
     guard iteration < iterations else {
       didFinish = true
       completion?()
@@ -105,7 +123,7 @@ class PerformanceTest {
     timer.start()
     test {
       self.timer.stop()
-      tearDown?()
+      tearDown()
       DispatchQueue.main.async {
         _ = self.launch(iteration: iteration + 1, asyncTest: asyncTest)
       }
