@@ -209,6 +209,8 @@ extension PerformanceTestQueue {
       }
   }
   
+  // MARK: - Promise
+  
   func measurePerformanceOfPromise() -> PerformanceTestQueue {
     return self
       .enqueue { (iterations) -> PerformanceTest in
