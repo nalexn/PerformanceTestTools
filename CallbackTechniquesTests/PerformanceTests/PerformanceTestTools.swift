@@ -88,15 +88,15 @@ class PerformanceTest {
     self.subject = subject
   }
   
-  func launch(syncTest: @escaping SyncTestSetup) -> Self {
-    return launch(syncTest: { _ in
-      return (test: syncTest(), tearDown: { _ in })
+  func launch(testSetup: SyncTestSetup) -> Self {
+    return launch(testSetup: { _ in
+      return (test: testSetup(), tearDown: { _ in })
     })
   }
   
-  func launch(syncTest: SyncTestSetupWithTearDown) -> Self {
+  func launch(testSetup: SyncTestSetupWithTearDown) -> Self {
     for _ in 0 ..< iterations {
-      let (test, tearDown) = syncTest()
+      let (test, tearDown) = testSetup()
       timer.start()
       test()
       timer.stop()
@@ -109,29 +109,29 @@ class PerformanceTest {
     return self
   }
   
-  func launch(asyncTest: @escaping AsyncTestSetup) -> Self {
-    return launch(asyncTest: { _ in
-      return (test: asyncTest(), tearDown: { _ in })
+  func launch(testSetup: @escaping AsyncTestSetup) -> Self {
+    return launch(testSetup: { _ in
+      return (test: testSetup(), tearDown: { _ in })
     })
   }
   
-  func launch(asyncTest: @escaping AsyncTestSetupWithTearDown) -> Self {
-    return launch(iteration: 0, asyncTest: asyncTest)
+  func launch(testSetup: @escaping AsyncTestSetupWithTearDown) -> Self {
+    return launch(iteration: 0, testSetup: testSetup)
   }
   
-  private func launch(iteration: Int, asyncTest: @escaping AsyncTestSetupWithTearDown) -> Self {
+  private func launch(iteration: Int, testSetup: @escaping AsyncTestSetupWithTearDown) -> Self {
     guard iteration < iterations else {
       didFinish = true
       completion?()
       return self
     }
-    let (test, tearDown) = asyncTest()
+    let (test, tearDown) = testSetup()
     timer.start()
     test {
       self.timer.stop()
       tearDown()
       DispatchQueue.main.async {
-        _ = self.launch(iteration: iteration + 1, asyncTest: asyncTest)
+        _ = self.launch(iteration: iteration + 1, testSetup: testSetup)
       }
     }
     return self
