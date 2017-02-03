@@ -13,17 +13,20 @@ class PerformanceTests: XCTestCase {
     
     let queueExpectation = expectation(description: "Queue expectation")
     
-    let defaultNumber = 100000
+    let syncTestIterations = 100000
+    let asyncTestIterations = 4000
     
     PerformanceTestQueue()
-      .measurePerformanceOfDelegate(iterations: defaultNumber)
-      .measurePerformanceOfNotificationCenter(iterations: defaultNumber)
-      .measurePerformanceOfClosureAndBlock(iterations: defaultNumber)
-      .measurePerformanceOfInvocation(iterations: defaultNumber)
-      .measurePerformanceOfResponder(iterations: defaultNumber)
-      .measurePerformanceOfKeyValueObserving(iterations: defaultNumber)
-      .measurePerformanceOfPromise(iterations: 3000)
-      .measurePerformanceOfReactiveSignal(iterations: defaultNumber)
+      .measurePerformanceOverhead(syncTestIterations: syncTestIterations,
+                                  asyncTestIterations: asyncTestIterations)
+      .measurePerformanceOfDelegate(iterations: syncTestIterations)
+      .measurePerformanceOfNotificationCenter(iterations: syncTestIterations)
+      .measurePerformanceOfClosureAndBlock(iterations: syncTestIterations)
+      .measurePerformanceOfInvocation(iterations: syncTestIterations)
+      .measurePerformanceOfResponder(iterations: syncTestIterations)
+      .measurePerformanceOfKeyValueObserving(iterations: syncTestIterations)
+      .measurePerformanceOfPromise(iterations: asyncTestIterations)
+      .measurePerformanceOfReactiveSignal(iterations: syncTestIterations)
       .finally {
         queueExpectation.fulfill()
       }
@@ -37,6 +40,26 @@ class PerformanceTests: XCTestCase {
 }
 
 extension PerformanceTestQueue {
+  
+  // MARK: - Overhead
+  
+  func measurePerformanceOverhead(syncTestIterations: Int, asyncTestIterations: Int) -> PerformanceTestQueue {
+    return self
+      .enqueue { () -> PerformanceTest in
+        return PerformanceTest(subject: "[Sync test overhead]", iterations: syncTestIterations)
+          .launch { () -> RunSyncTestClosure in
+            return { _ in }
+        }
+      }
+      .enqueue { () -> PerformanceTest in
+        return PerformanceTest(subject: "[Async test overhead]", iterations: asyncTestIterations)
+          .launch { () -> RunAsyncTestClosure in
+            return { completion -> Void in
+              completion()
+            }
+        }
+    }
+  }
   
   // MARK: - Delegate
   
