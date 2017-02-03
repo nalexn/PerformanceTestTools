@@ -7,41 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F64CF9401E45031C00776BA2 /* ReactiveSignal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64CF93F1E45031C00776BA2 /* ReactiveSignal.swift */; };
-		F64CF9421E45032A00776BA2 /* ReactiveSignalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64CF9411E45032A00776BA2 /* ReactiveSignalTests.swift */; };
-		F6AF87A71E3E452B00CA1E3B /* Delegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AF87A51E3E452B00CA1E3B /* Delegate.m */; };
-		F6AF87A81E3E452B00CA1E3B /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AF87A61E3E452B00CA1E3B /* Delegate.swift */; };
-		F6AF87AA1E3E456100CA1E3B /* DelegateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AF87A91E3E456100CA1E3B /* DelegateTests.m */; };
-		F6AF87AE1E3E458B00CA1E3B /* DelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AF87AD1E3E458B00CA1E3B /* DelegateTests.swift */; };
-		F6AF87B41E3E4DC400CA1E3B /* NotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AF87B31E3E4DC400CA1E3B /* NotificationCenter.swift */; };
-		F6AF87B61E3E4DD300CA1E3B /* NotificationCenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AF87B51E3E4DD300CA1E3B /* NotificationCenterTests.swift */; };
-		F6AF87B91E3E4DE400CA1E3B /* NotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AF87B81E3E4DE400CA1E3B /* NotificationCenter.m */; };
-		F6AF87BB1E3E4DF600CA1E3B /* NotificationCenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AF87BA1E3E4DF600CA1E3B /* NotificationCenterTests.m */; };
-		F6E6EF161E3F5A42007A139C /* Invocation.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E6EF151E3F5A42007A139C /* Invocation.m */; };
-		F6E6EF181E3F5A55007A139C /* InvocationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E6EF171E3F5A55007A139C /* InvocationTests.m */; };
-		F6E6EF1C1E3F6B66007A139C /* ResponderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E6EF1B1E3F6B66007A139C /* ResponderTests.m */; };
-		F6E6EF201E3F6B82007A139C /* Responder.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E6EF1F1E3F6B82007A139C /* Responder.m */; };
-		F6E6EF451E3F74A3007A139C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E6EF441E3F74A3007A139C /* AppDelegate.swift */; };
-		F6E6EF581E3F7FE8007A139C /* Responder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E6EF571E3F7FE8007A139C /* Responder.swift */; };
-		F6E6EF5A1E3F7FF5007A139C /* ResponderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E6EF591E3F7FF5007A139C /* ResponderTests.swift */; };
-		F6E6EF601E3F851F007A139C /* KeyValueObserving.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E6EF5F1E3F851F007A139C /* KeyValueObserving.m */; };
-		F6E6EF621E3F852A007A139C /* KeyValueObservingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E6EF611E3F852A007A139C /* KeyValueObservingTests.m */; };
-		F6E6EF651E3F87A8007A139C /* KeyValueObserving.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E6EF641E3F87A8007A139C /* KeyValueObserving.swift */; };
-		F6E6EF671E3F87BD007A139C /* KeyValueObservingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6E6EF661E3F87BD007A139C /* KeyValueObservingTests.swift */; };
-		F6ED6F2B1E3E53BC00431442 /* Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ED6F2A1E3E53BC00431442 /* Closure.swift */; };
-		F6ED6F2D1E3E53C900431442 /* ClosureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6ED6F2C1E3E53C900431442 /* ClosureTests.swift */; };
-		F6ED6F301E3E540300431442 /* Block.m in Sources */ = {isa = PBXBuildFile; fileRef = F6ED6F2F1E3E540300431442 /* Block.m */; };
-		F6ED6F321E3E541800431442 /* BlockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6ED6F311E3E541800431442 /* BlockTests.m */; };
+		F64CF9481E4514A700776BA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64CF9451E45149D00776BA2 /* AppDelegate.swift */; };
+		F64CF9781E45166200776BA2 /* Block.m in Sources */ = {isa = PBXBuildFile; fileRef = F64CF94F1E45166200776BA2 /* Block.m */; };
+		F64CF9791E45166200776BA2 /* BlockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F64CF9501E45166200776BA2 /* BlockTests.m */; };
+		F64CF97A1E45166200776BA2 /* Closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64CF9511E45166200776BA2 /* Closure.swift */; };
+		F64CF97B1E45166200776BA2 /* ClosureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64CF9521E45166200776BA2 /* ClosureTests.swift */; };
+		F64CF97C1E45166200776BA2 /* Delegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F64CF9551E45166200776BA2 /* Delegate.m */; };
+		F64CF97D1E45166200776BA2 /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64CF9561E45166200776BA2 /* Delegate.swift */; };
+		F64CF97E1E45166200776BA2 /* DelegateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F64CF9571E45166200776BA2 /* DelegateTests.m */; };
+		F64CF97F1E45166200776BA2 /* DelegateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64CF9581E45166200776BA2 /* DelegateTests.swift */; };
+		F64CF9801E45166200776BA2 /* Invocation.m in Sources */ = {isa = PBXBuildFile; fileRef = F64CF95B1E45166200776BA2 /* Invocation.m */; };
+		F64CF9811E45166200776BA2 /* InvocationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F64CF95C1E45166200776BA2 /* InvocationTests.m */; };
+		F64CF9821E45166200776BA2 /* KeyValueObserving.m in Sources */ = {isa = PBXBuildFile; fileRef = F64CF95F1E45166200776BA2 /* KeyValueObserving.m */; };
+		F64CF9831E45166200776BA2 /* KeyValueObserving.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64CF9601E45166200776BA2 /* KeyValueObserving.swift */; };
+		F64CF9841E45166200776BA2 /* KeyValueObservingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F64CF9611E45166200776BA2 /* KeyValueObservingTests.m */; };
+		F64CF9851E45166200776BA2 /* KeyValueObservingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64CF9621E45166200776BA2 /* KeyValueObservingTests.swift */; };
+		F64CF9861E45166200776BA2 /* NotificationCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = F64CF9651E45166200776BA2 /* NotificationCenter.m */; };
+		F64CF9871E45166200776BA2 /* NotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64CF9661E45166200776BA2 /* NotificationCenter.swift */; };
+		F64CF9881E45166200776BA2 /* NotificationCenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F64CF9671E45166200776BA2 /* NotificationCenterTests.m */; };
+		F64CF9891E45166200776BA2 /* NotificationCenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64CF9681E45166200776BA2 /* NotificationCenterTests.swift */; };
+		F64CF98A1E45166200776BA2 /* PerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64CF9691E45166200776BA2 /* PerformanceTests.swift */; };
+		F64CF98B1E45166200776BA2 /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64CF96B1E45166200776BA2 /* Promise.swift */; };
+		F64CF98C1E45166200776BA2 /* PromiseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64CF96C1E45166200776BA2 /* PromiseTests.swift */; };
+		F64CF98D1E45166200776BA2 /* ReactiveSignal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64CF96E1E45166200776BA2 /* ReactiveSignal.swift */; };
+		F64CF98E1E45166200776BA2 /* ReactiveSignalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64CF96F1E45166200776BA2 /* ReactiveSignalTests.swift */; };
+		F64CF98F1E45166200776BA2 /* Responder.m in Sources */ = {isa = PBXBuildFile; fileRef = F64CF9721E45166200776BA2 /* Responder.m */; };
+		F64CF9901E45166200776BA2 /* Responder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64CF9731E45166200776BA2 /* Responder.swift */; };
+		F64CF9911E45166200776BA2 /* ResponderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F64CF9741E45166200776BA2 /* ResponderTests.m */; };
+		F64CF9921E45166200776BA2 /* ResponderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64CF9751E45166200776BA2 /* ResponderTests.swift */; };
+		F64CF9931E45166200776BA2 /* PerformanceTestTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64CF9771E45166200776BA2 /* PerformanceTestTools.swift */; };
 		F6F1157C1E41D5580014AA00 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F115791E41D5580014AA00 /* PromiseKit.framework */; };
 		F6F1157D1E41D5580014AA00 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F1157A1E41D5580014AA00 /* ReactiveSwift.framework */; };
 		F6F1157E1E41D5580014AA00 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F1157B1E41D5580014AA00 /* Result.framework */; };
-		F6F115821E41D8430014AA00 /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F115811E41D8430014AA00 /* Promise.swift */; };
-		F6F115841E41D8530014AA00 /* PromiseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F115831E41D8530014AA00 /* PromiseTests.swift */; };
 		F6F115861E41EF690014AA00 /* PromiseKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F6F115791E41D5580014AA00 /* PromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F6F115871E41EF690014AA00 /* ReactiveSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F6F1157A1E41D5580014AA00 /* ReactiveSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F6F115881E41EF690014AA00 /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F6F1157B1E41D5580014AA00 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F6F1158B1E4216C10014AA00 /* PerformanceTestTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F1158A1E4216C10014AA00 /* PerformanceTestTools.swift */; };
-		F6F1158D1E422A540014AA00 /* PerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6F1158C1E422A540014AA00 /* PerformanceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,50 +70,50 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		F64CF93F1E45031C00776BA2 /* ReactiveSignal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactiveSignal.swift; sourceTree = "<group>"; };
-		F64CF9411E45032A00776BA2 /* ReactiveSignalTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactiveSignalTests.swift; sourceTree = "<group>"; };
+		F64CF9451E45149D00776BA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F64CF9461E45149D00776BA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F64CF9491E45151F00776BA2 /* CallbackTechniquesTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CallbackTechniquesTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		F64CF94A1E45151F00776BA2 /* CallbackTechniquesTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CallbackTechniquesTests-Prefix.pch"; sourceTree = "<group>"; };
+		F64CF94B1E45151F00776BA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F64CF94E1E45166200776BA2 /* Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Block.h; sourceTree = "<group>"; };
+		F64CF94F1E45166200776BA2 /* Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Block.m; sourceTree = "<group>"; };
+		F64CF9501E45166200776BA2 /* BlockTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockTests.m; sourceTree = "<group>"; };
+		F64CF9511E45166200776BA2 /* Closure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Closure.swift; sourceTree = "<group>"; };
+		F64CF9521E45166200776BA2 /* ClosureTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosureTests.swift; sourceTree = "<group>"; };
+		F64CF9541E45166200776BA2 /* Delegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Delegate.h; sourceTree = "<group>"; };
+		F64CF9551E45166200776BA2 /* Delegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Delegate.m; sourceTree = "<group>"; };
+		F64CF9561E45166200776BA2 /* Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delegate.swift; sourceTree = "<group>"; };
+		F64CF9571E45166200776BA2 /* DelegateTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DelegateTests.m; sourceTree = "<group>"; };
+		F64CF9581E45166200776BA2 /* DelegateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateTests.swift; sourceTree = "<group>"; };
+		F64CF95A1E45166200776BA2 /* Invocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Invocation.h; sourceTree = "<group>"; };
+		F64CF95B1E45166200776BA2 /* Invocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Invocation.m; sourceTree = "<group>"; };
+		F64CF95C1E45166200776BA2 /* InvocationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvocationTests.m; sourceTree = "<group>"; };
+		F64CF95E1E45166200776BA2 /* KeyValueObserving.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyValueObserving.h; sourceTree = "<group>"; };
+		F64CF95F1E45166200776BA2 /* KeyValueObserving.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyValueObserving.m; sourceTree = "<group>"; };
+		F64CF9601E45166200776BA2 /* KeyValueObserving.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyValueObserving.swift; sourceTree = "<group>"; };
+		F64CF9611E45166200776BA2 /* KeyValueObservingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyValueObservingTests.m; sourceTree = "<group>"; };
+		F64CF9621E45166200776BA2 /* KeyValueObservingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyValueObservingTests.swift; sourceTree = "<group>"; };
+		F64CF9641E45166200776BA2 /* NotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationCenter.h; sourceTree = "<group>"; };
+		F64CF9651E45166200776BA2 /* NotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationCenter.m; sourceTree = "<group>"; };
+		F64CF9661E45166200776BA2 /* NotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenter.swift; sourceTree = "<group>"; };
+		F64CF9671E45166200776BA2 /* NotificationCenterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationCenterTests.m; sourceTree = "<group>"; };
+		F64CF9681E45166200776BA2 /* NotificationCenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenterTests.swift; sourceTree = "<group>"; };
+		F64CF9691E45166200776BA2 /* PerformanceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformanceTests.swift; sourceTree = "<group>"; };
+		F64CF96B1E45166200776BA2 /* Promise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Promise.swift; sourceTree = "<group>"; };
+		F64CF96C1E45166200776BA2 /* PromiseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromiseTests.swift; sourceTree = "<group>"; };
+		F64CF96E1E45166200776BA2 /* ReactiveSignal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactiveSignal.swift; sourceTree = "<group>"; };
+		F64CF96F1E45166200776BA2 /* ReactiveSignalTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactiveSignalTests.swift; sourceTree = "<group>"; };
+		F64CF9711E45166200776BA2 /* Responder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Responder.h; sourceTree = "<group>"; };
+		F64CF9721E45166200776BA2 /* Responder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Responder.m; sourceTree = "<group>"; };
+		F64CF9731E45166200776BA2 /* Responder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Responder.swift; sourceTree = "<group>"; };
+		F64CF9741E45166200776BA2 /* ResponderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponderTests.m; sourceTree = "<group>"; };
+		F64CF9751E45166200776BA2 /* ResponderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponderTests.swift; sourceTree = "<group>"; };
+		F64CF9771E45166200776BA2 /* PerformanceTestTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformanceTestTools.swift; sourceTree = "<group>"; };
 		F6AF87861E3E3C3700CA1E3B /* CallbackTechniquesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CallbackTechniquesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F6AF878C1E3E3C3700CA1E3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F6AF87971E3E3F1800CA1E3B /* CallbackTechniquesTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CallbackTechniquesTests-Bridging-Header.h"; sourceTree = "<group>"; };
-		F6AF87A41E3E452B00CA1E3B /* Delegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Delegate.h; sourceTree = "<group>"; };
-		F6AF87A51E3E452B00CA1E3B /* Delegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Delegate.m; sourceTree = "<group>"; };
-		F6AF87A61E3E452B00CA1E3B /* Delegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Delegate.swift; sourceTree = "<group>"; };
-		F6AF87A91E3E456100CA1E3B /* DelegateTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DelegateTests.m; sourceTree = "<group>"; };
-		F6AF87AD1E3E458B00CA1E3B /* DelegateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelegateTests.swift; sourceTree = "<group>"; };
-		F6AF87AF1E3E48C600CA1E3B /* CallbackTechniquesTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CallbackTechniquesTests-Prefix.pch"; sourceTree = "<group>"; };
-		F6AF87B31E3E4DC400CA1E3B /* NotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenter.swift; sourceTree = "<group>"; };
-		F6AF87B51E3E4DD300CA1E3B /* NotificationCenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenterTests.swift; sourceTree = "<group>"; };
-		F6AF87B71E3E4DE400CA1E3B /* NotificationCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationCenter.h; sourceTree = "<group>"; };
-		F6AF87B81E3E4DE400CA1E3B /* NotificationCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationCenter.m; sourceTree = "<group>"; };
-		F6AF87BA1E3E4DF600CA1E3B /* NotificationCenterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationCenterTests.m; sourceTree = "<group>"; };
-		F6E6EF141E3F5A42007A139C /* Invocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Invocation.h; sourceTree = "<group>"; };
-		F6E6EF151E3F5A42007A139C /* Invocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Invocation.m; sourceTree = "<group>"; };
-		F6E6EF171E3F5A55007A139C /* InvocationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvocationTests.m; sourceTree = "<group>"; };
-		F6E6EF1B1E3F6B66007A139C /* ResponderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponderTests.m; sourceTree = "<group>"; };
-		F6E6EF1E1E3F6B82007A139C /* Responder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Responder.h; sourceTree = "<group>"; };
-		F6E6EF1F1E3F6B82007A139C /* Responder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Responder.m; sourceTree = "<group>"; };
 		F6E6EF421E3F74A3007A139C /* CallbackTechniques.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CallbackTechniques.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F6E6EF441E3F74A3007A139C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F6E6EF501E3F74A3007A139C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F6E6EF571E3F7FE8007A139C /* Responder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Responder.swift; sourceTree = "<group>"; };
-		F6E6EF591E3F7FF5007A139C /* ResponderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponderTests.swift; sourceTree = "<group>"; };
-		F6E6EF5E1E3F851F007A139C /* KeyValueObserving.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyValueObserving.h; sourceTree = "<group>"; };
-		F6E6EF5F1E3F851F007A139C /* KeyValueObserving.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyValueObserving.m; sourceTree = "<group>"; };
-		F6E6EF611E3F852A007A139C /* KeyValueObservingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyValueObservingTests.m; sourceTree = "<group>"; };
-		F6E6EF641E3F87A8007A139C /* KeyValueObserving.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyValueObserving.swift; sourceTree = "<group>"; };
-		F6E6EF661E3F87BD007A139C /* KeyValueObservingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyValueObservingTests.swift; sourceTree = "<group>"; };
-		F6ED6F2A1E3E53BC00431442 /* Closure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Closure.swift; sourceTree = "<group>"; };
-		F6ED6F2C1E3E53C900431442 /* ClosureTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClosureTests.swift; sourceTree = "<group>"; };
-		F6ED6F2E1E3E540300431442 /* Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Block.h; sourceTree = "<group>"; };
-		F6ED6F2F1E3E540300431442 /* Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Block.m; sourceTree = "<group>"; };
-		F6ED6F311E3E541800431442 /* BlockTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockTests.m; sourceTree = "<group>"; };
 		F6F115791E41D5580014AA00 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
 		F6F1157A1E41D5580014AA00 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
 		F6F1157B1E41D5580014AA00 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
-		F6F115811E41D8430014AA00 /* Promise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Promise.swift; sourceTree = "<group>"; };
-		F6F115831E41D8530014AA00 /* PromiseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromiseTests.swift; sourceTree = "<group>"; };
-		F6F1158A1E4216C10014AA00 /* PerformanceTestTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformanceTestTools.swift; sourceTree = "<group>"; };
-		F6F1158C1E422A540014AA00 /* PerformanceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformanceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,19 +137,246 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F64CF93D1E4502E700776BA2 /* ReactiveSignal */ = {
+		F64CF9431E45149D00776BA2 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
-				F64CF93E1E4502F600776BA2 /* Swift */,
+				F64CF9441E45149D00776BA2 /* App */,
+				F64CF9471E45149D00776BA2 /* Tests */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		F64CF9441E45149D00776BA2 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F64CF9451E45149D00776BA2 /* AppDelegate.swift */,
+				F64CF9461E45149D00776BA2 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F64CF9471E45149D00776BA2 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F64CF9491E45151F00776BA2 /* CallbackTechniquesTests-Bridging-Header.h */,
+				F64CF94A1E45151F00776BA2 /* CallbackTechniquesTests-Prefix.pch */,
+				F64CF94B1E45151F00776BA2 /* Info.plist */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		F64CF94C1E45166200776BA2 /* CallbackTechniques */ = {
+			isa = PBXGroup;
+			children = (
+				F64CF9691E45166200776BA2 /* PerformanceTests.swift */,
+				F64CF9531E45166200776BA2 /* Delegate */,
+				F64CF9631E45166200776BA2 /* NotificationCenter */,
+				F64CF94D1E45166200776BA2 /* Closure(Block) */,
+				F64CF9591E45166200776BA2 /* Invocation */,
+				F64CF9701E45166200776BA2 /* Responder */,
+				F64CF95D1E45166200776BA2 /* KeyValueObserving */,
+				F64CF96A1E45166200776BA2 /* Promise */,
+				F64CF96D1E45166200776BA2 /* ReactiveSignal */,
+			);
+			path = CallbackTechniques;
+			sourceTree = "<group>";
+		};
+		F64CF94D1E45166200776BA2 /* Closure(Block) */ = {
+			isa = PBXGroup;
+			children = (
+				F64CF99C1E4516BE00776BA2 /* Swift */,
+				F64CF9961E45169D00776BA2 /* Objective-C */,
+			);
+			path = "Closure(Block)";
+			sourceTree = "<group>";
+		};
+		F64CF9531E45166200776BA2 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				F64CF99A1E4516B500776BA2 /* Swift */,
+				F64CF9941E45169000776BA2 /* Objective-C */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		F64CF9591E45166200776BA2 /* Invocation */ = {
+			isa = PBXGroup;
+			children = (
+				F64CF9971E45169F00776BA2 /* Objective-C */,
+			);
+			path = Invocation;
+			sourceTree = "<group>";
+		};
+		F64CF95D1E45166200776BA2 /* KeyValueObserving */ = {
+			isa = PBXGroup;
+			children = (
+				F64CF99F1E4516C600776BA2 /* Swift */,
+				F64CF9991E4516A500776BA2 /* Objective-C */,
+			);
+			path = KeyValueObserving;
+			sourceTree = "<group>";
+		};
+		F64CF9631E45166200776BA2 /* NotificationCenter */ = {
+			isa = PBXGroup;
+			children = (
+				F64CF99B1E4516BB00776BA2 /* Swift */,
+				F64CF9951E45169A00776BA2 /* Objective-C */,
+			);
+			path = NotificationCenter;
+			sourceTree = "<group>";
+		};
+		F64CF96A1E45166200776BA2 /* Promise */ = {
+			isa = PBXGroup;
+			children = (
+				F64CF9A01E4516CA00776BA2 /* Swift */,
+			);
+			path = Promise;
+			sourceTree = "<group>";
+		};
+		F64CF96D1E45166200776BA2 /* ReactiveSignal */ = {
+			isa = PBXGroup;
+			children = (
+				F64CF9A11E4516CE00776BA2 /* Swift */,
 			);
 			path = ReactiveSignal;
 			sourceTree = "<group>";
 		};
-		F64CF93E1E4502F600776BA2 /* Swift */ = {
+		F64CF9701E45166200776BA2 /* Responder */ = {
 			isa = PBXGroup;
 			children = (
-				F64CF93F1E45031C00776BA2 /* ReactiveSignal.swift */,
-				F64CF9411E45032A00776BA2 /* ReactiveSignalTests.swift */,
+				F64CF99E1E4516C400776BA2 /* Swift */,
+				F64CF9981E4516A200776BA2 /* Objective-C */,
+			);
+			path = Responder;
+			sourceTree = "<group>";
+		};
+		F64CF9761E45166200776BA2 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				F64CF9771E45166200776BA2 /* PerformanceTestTools.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		F64CF9941E45169000776BA2 /* Objective-C */ = {
+			isa = PBXGroup;
+			children = (
+				F64CF9541E45166200776BA2 /* Delegate.h */,
+				F64CF9551E45166200776BA2 /* Delegate.m */,
+				F64CF9571E45166200776BA2 /* DelegateTests.m */,
+			);
+			name = "Objective-C";
+			sourceTree = "<group>";
+		};
+		F64CF9951E45169A00776BA2 /* Objective-C */ = {
+			isa = PBXGroup;
+			children = (
+				F64CF9641E45166200776BA2 /* NotificationCenter.h */,
+				F64CF9651E45166200776BA2 /* NotificationCenter.m */,
+				F64CF9671E45166200776BA2 /* NotificationCenterTests.m */,
+			);
+			name = "Objective-C";
+			sourceTree = "<group>";
+		};
+		F64CF9961E45169D00776BA2 /* Objective-C */ = {
+			isa = PBXGroup;
+			children = (
+				F64CF94E1E45166200776BA2 /* Block.h */,
+				F64CF94F1E45166200776BA2 /* Block.m */,
+				F64CF9501E45166200776BA2 /* BlockTests.m */,
+			);
+			name = "Objective-C";
+			sourceTree = "<group>";
+		};
+		F64CF9971E45169F00776BA2 /* Objective-C */ = {
+			isa = PBXGroup;
+			children = (
+				F64CF95A1E45166200776BA2 /* Invocation.h */,
+				F64CF95B1E45166200776BA2 /* Invocation.m */,
+				F64CF95C1E45166200776BA2 /* InvocationTests.m */,
+			);
+			name = "Objective-C";
+			sourceTree = "<group>";
+		};
+		F64CF9981E4516A200776BA2 /* Objective-C */ = {
+			isa = PBXGroup;
+			children = (
+				F64CF9711E45166200776BA2 /* Responder.h */,
+				F64CF9721E45166200776BA2 /* Responder.m */,
+				F64CF9741E45166200776BA2 /* ResponderTests.m */,
+			);
+			name = "Objective-C";
+			sourceTree = "<group>";
+		};
+		F64CF9991E4516A500776BA2 /* Objective-C */ = {
+			isa = PBXGroup;
+			children = (
+				F64CF95E1E45166200776BA2 /* KeyValueObserving.h */,
+				F64CF95F1E45166200776BA2 /* KeyValueObserving.m */,
+				F64CF9611E45166200776BA2 /* KeyValueObservingTests.m */,
+			);
+			name = "Objective-C";
+			sourceTree = "<group>";
+		};
+		F64CF99A1E4516B500776BA2 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				F64CF9561E45166200776BA2 /* Delegate.swift */,
+				F64CF9581E45166200776BA2 /* DelegateTests.swift */,
+			);
+			name = Swift;
+			sourceTree = "<group>";
+		};
+		F64CF99B1E4516BB00776BA2 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				F64CF9661E45166200776BA2 /* NotificationCenter.swift */,
+				F64CF9681E45166200776BA2 /* NotificationCenterTests.swift */,
+			);
+			name = Swift;
+			sourceTree = "<group>";
+		};
+		F64CF99C1E4516BE00776BA2 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				F64CF9511E45166200776BA2 /* Closure.swift */,
+				F64CF9521E45166200776BA2 /* ClosureTests.swift */,
+			);
+			name = Swift;
+			sourceTree = "<group>";
+		};
+		F64CF99E1E4516C400776BA2 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				F64CF9731E45166200776BA2 /* Responder.swift */,
+				F64CF9751E45166200776BA2 /* ResponderTests.swift */,
+			);
+			name = Swift;
+			sourceTree = "<group>";
+		};
+		F64CF99F1E4516C600776BA2 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				F64CF9601E45166200776BA2 /* KeyValueObserving.swift */,
+				F64CF9621E45166200776BA2 /* KeyValueObservingTests.swift */,
+			);
+			name = Swift;
+			sourceTree = "<group>";
+		};
+		F64CF9A01E4516CA00776BA2 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				F64CF96B1E45166200776BA2 /* Promise.swift */,
+				F64CF96C1E45166200776BA2 /* PromiseTests.swift */,
+			);
+			name = Swift;
+			sourceTree = "<group>";
+		};
+		F64CF9A11E4516CE00776BA2 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				F64CF96E1E45166200776BA2 /* ReactiveSignal.swift */,
+				F64CF96F1E45166200776BA2 /* ReactiveSignalTests.swift */,
 			);
 			name = Swift;
 			sourceTree = "<group>";
@@ -157,10 +384,9 @@
 		F6AF87691E3E3C3600CA1E3B = {
 			isa = PBXGroup;
 			children = (
-				F6AF87891E3E3C3700CA1E3B /* CallbackTechniquesTests */,
-				F6F115891E4216AC0014AA00 /* PerformanceTests */,
-				F6AF879A1E3E3F2E00CA1E3B /* Info.plist and headers */,
-				F6E6EF431E3F74A3007A139C /* CallbackTechniques */,
+				F64CF94C1E45166200776BA2 /* CallbackTechniques */,
+				F64CF9761E45166200776BA2 /* Tools */,
+				F64CF9431E45149D00776BA2 /* SupportingFiles */,
 				F6AF87731E3E3C3700CA1E3B /* Products */,
 				F6F115781E41D5580014AA00 /* Frameworks */,
 			);
@@ -175,199 +401,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F6AF87891E3E3C3700CA1E3B /* CallbackTechniquesTests */ = {
-			isa = PBXGroup;
-			children = (
-				F6AF87A31E3E452B00CA1E3B /* Delegate */,
-				F6AF87B01E3E4D9A00CA1E3B /* NotificationCenter */,
-				F6ED6F271E3E538500431442 /* Closure(Block) */,
-				F6E6EF121E3F5A21007A139C /* Invocation */,
-				F6E6EF1A1E3F6B55007A139C /* Responder */,
-				F6E6EF5C1E3F84E1007A139C /* KeyValueObserving */,
-				F6F1157F1E41D8260014AA00 /* Promise */,
-				F64CF93D1E4502E700776BA2 /* ReactiveSignal */,
-			);
-			path = CallbackTechniquesTests;
-			sourceTree = "<group>";
-		};
-		F6AF879A1E3E3F2E00CA1E3B /* Info.plist and headers */ = {
-			isa = PBXGroup;
-			children = (
-				F6AF87971E3E3F1800CA1E3B /* CallbackTechniquesTests-Bridging-Header.h */,
-				F6AF87AF1E3E48C600CA1E3B /* CallbackTechniquesTests-Prefix.pch */,
-				F6AF878C1E3E3C3700CA1E3B /* Info.plist */,
-			);
-			name = "Info.plist and headers";
-			path = CallbackTechniquesTests;
-			sourceTree = "<group>";
-		};
-		F6AF87A31E3E452B00CA1E3B /* Delegate */ = {
-			isa = PBXGroup;
-			children = (
-				F6AF87AC1E3E457600CA1E3B /* Swift */,
-				F6AF87AB1E3E456A00CA1E3B /* Objective-C */,
-			);
-			path = Delegate;
-			sourceTree = "<group>";
-		};
-		F6AF87AB1E3E456A00CA1E3B /* Objective-C */ = {
-			isa = PBXGroup;
-			children = (
-				F6AF87A41E3E452B00CA1E3B /* Delegate.h */,
-				F6AF87A51E3E452B00CA1E3B /* Delegate.m */,
-				F6AF87A91E3E456100CA1E3B /* DelegateTests.m */,
-			);
-			name = "Objective-C";
-			sourceTree = "<group>";
-		};
-		F6AF87AC1E3E457600CA1E3B /* Swift */ = {
-			isa = PBXGroup;
-			children = (
-				F6AF87A61E3E452B00CA1E3B /* Delegate.swift */,
-				F6AF87AD1E3E458B00CA1E3B /* DelegateTests.swift */,
-			);
-			name = Swift;
-			sourceTree = "<group>";
-		};
-		F6AF87B01E3E4D9A00CA1E3B /* NotificationCenter */ = {
-			isa = PBXGroup;
-			children = (
-				F6AF87B11E3E4DA200CA1E3B /* Swift */,
-				F6AF87B21E3E4DA700CA1E3B /* Objective-C */,
-			);
-			path = NotificationCenter;
-			sourceTree = "<group>";
-		};
-		F6AF87B11E3E4DA200CA1E3B /* Swift */ = {
-			isa = PBXGroup;
-			children = (
-				F6AF87B31E3E4DC400CA1E3B /* NotificationCenter.swift */,
-				F6AF87B51E3E4DD300CA1E3B /* NotificationCenterTests.swift */,
-			);
-			name = Swift;
-			sourceTree = "<group>";
-		};
-		F6AF87B21E3E4DA700CA1E3B /* Objective-C */ = {
-			isa = PBXGroup;
-			children = (
-				F6AF87B71E3E4DE400CA1E3B /* NotificationCenter.h */,
-				F6AF87B81E3E4DE400CA1E3B /* NotificationCenter.m */,
-				F6AF87BA1E3E4DF600CA1E3B /* NotificationCenterTests.m */,
-			);
-			name = "Objective-C";
-			sourceTree = "<group>";
-		};
-		F6E6EF121E3F5A21007A139C /* Invocation */ = {
-			isa = PBXGroup;
-			children = (
-				F6E6EF131E3F5A29007A139C /* Objective-C */,
-			);
-			path = Invocation;
-			sourceTree = "<group>";
-		};
-		F6E6EF131E3F5A29007A139C /* Objective-C */ = {
-			isa = PBXGroup;
-			children = (
-				F6E6EF141E3F5A42007A139C /* Invocation.h */,
-				F6E6EF151E3F5A42007A139C /* Invocation.m */,
-				F6E6EF171E3F5A55007A139C /* InvocationTests.m */,
-			);
-			name = "Objective-C";
-			sourceTree = "<group>";
-		};
-		F6E6EF1A1E3F6B55007A139C /* Responder */ = {
-			isa = PBXGroup;
-			children = (
-				F6E6EF561E3F7FD8007A139C /* Swift */,
-				F6E6EF1D1E3F6B6A007A139C /* Objective-C */,
-			);
-			path = Responder;
-			sourceTree = "<group>";
-		};
-		F6E6EF1D1E3F6B6A007A139C /* Objective-C */ = {
-			isa = PBXGroup;
-			children = (
-				F6E6EF1E1E3F6B82007A139C /* Responder.h */,
-				F6E6EF1F1E3F6B82007A139C /* Responder.m */,
-				F6E6EF1B1E3F6B66007A139C /* ResponderTests.m */,
-			);
-			name = "Objective-C";
-			sourceTree = "<group>";
-		};
-		F6E6EF431E3F74A3007A139C /* CallbackTechniques */ = {
-			isa = PBXGroup;
-			children = (
-				F6E6EF441E3F74A3007A139C /* AppDelegate.swift */,
-				F6E6EF501E3F74A3007A139C /* Info.plist */,
-			);
-			path = CallbackTechniques;
-			sourceTree = "<group>";
-		};
-		F6E6EF561E3F7FD8007A139C /* Swift */ = {
-			isa = PBXGroup;
-			children = (
-				F6E6EF571E3F7FE8007A139C /* Responder.swift */,
-				F6E6EF591E3F7FF5007A139C /* ResponderTests.swift */,
-			);
-			name = Swift;
-			sourceTree = "<group>";
-		};
-		F6E6EF5C1E3F84E1007A139C /* KeyValueObserving */ = {
-			isa = PBXGroup;
-			children = (
-				F6E6EF631E3F8797007A139C /* Swift */,
-				F6E6EF5D1E3F84E7007A139C /* Objective-C */,
-			);
-			path = KeyValueObserving;
-			sourceTree = "<group>";
-		};
-		F6E6EF5D1E3F84E7007A139C /* Objective-C */ = {
-			isa = PBXGroup;
-			children = (
-				F6E6EF5E1E3F851F007A139C /* KeyValueObserving.h */,
-				F6E6EF5F1E3F851F007A139C /* KeyValueObserving.m */,
-				F6E6EF611E3F852A007A139C /* KeyValueObservingTests.m */,
-			);
-			name = "Objective-C";
-			sourceTree = "<group>";
-		};
-		F6E6EF631E3F8797007A139C /* Swift */ = {
-			isa = PBXGroup;
-			children = (
-				F6E6EF641E3F87A8007A139C /* KeyValueObserving.swift */,
-				F6E6EF661E3F87BD007A139C /* KeyValueObservingTests.swift */,
-			);
-			name = Swift;
-			sourceTree = "<group>";
-		};
-		F6ED6F271E3E538500431442 /* Closure(Block) */ = {
-			isa = PBXGroup;
-			children = (
-				F6ED6F281E3E539A00431442 /* Swift */,
-				F6ED6F291E3E53A000431442 /* Objective-C */,
-			);
-			path = "Closure(Block)";
-			sourceTree = "<group>";
-		};
-		F6ED6F281E3E539A00431442 /* Swift */ = {
-			isa = PBXGroup;
-			children = (
-				F6ED6F2A1E3E53BC00431442 /* Closure.swift */,
-				F6ED6F2C1E3E53C900431442 /* ClosureTests.swift */,
-			);
-			name = Swift;
-			sourceTree = "<group>";
-		};
-		F6ED6F291E3E53A000431442 /* Objective-C */ = {
-			isa = PBXGroup;
-			children = (
-				F6ED6F2E1E3E540300431442 /* Block.h */,
-				F6ED6F2F1E3E540300431442 /* Block.m */,
-				F6ED6F311E3E541800431442 /* BlockTests.m */,
-			);
-			name = "Objective-C";
-			sourceTree = "<group>";
-		};
 		F6F115781E41D5580014AA00 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -376,33 +409,6 @@
 				F6F1157B1E41D5580014AA00 /* Result.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		F6F1157F1E41D8260014AA00 /* Promise */ = {
-			isa = PBXGroup;
-			children = (
-				F6F115801E41D8300014AA00 /* Swift */,
-			);
-			path = Promise;
-			sourceTree = "<group>";
-		};
-		F6F115801E41D8300014AA00 /* Swift */ = {
-			isa = PBXGroup;
-			children = (
-				F6F115811E41D8430014AA00 /* Promise.swift */,
-				F6F115831E41D8530014AA00 /* PromiseTests.swift */,
-			);
-			name = Swift;
-			sourceTree = "<group>";
-		};
-		F6F115891E4216AC0014AA00 /* PerformanceTests */ = {
-			isa = PBXGroup;
-			children = (
-				F6F1158C1E422A540014AA00 /* PerformanceTests.swift */,
-				F6F1158A1E4216C10014AA00 /* PerformanceTestTools.swift */,
-			);
-			name = PerformanceTests;
-			path = CallbackTechniquesTests/PerformanceTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -507,34 +513,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6AF87AE1E3E458B00CA1E3B /* DelegateTests.swift in Sources */,
-				F6F115821E41D8430014AA00 /* Promise.swift in Sources */,
-				F6ED6F321E3E541800431442 /* BlockTests.m in Sources */,
-				F6E6EF5A1E3F7FF5007A139C /* ResponderTests.swift in Sources */,
-				F6E6EF581E3F7FE8007A139C /* Responder.swift in Sources */,
-				F6ED6F301E3E540300431442 /* Block.m in Sources */,
-				F6E6EF671E3F87BD007A139C /* KeyValueObservingTests.swift in Sources */,
-				F6F1158B1E4216C10014AA00 /* PerformanceTestTools.swift in Sources */,
-				F6AF87A81E3E452B00CA1E3B /* Delegate.swift in Sources */,
-				F6AF87B41E3E4DC400CA1E3B /* NotificationCenter.swift in Sources */,
-				F6E6EF621E3F852A007A139C /* KeyValueObservingTests.m in Sources */,
-				F6AF87A71E3E452B00CA1E3B /* Delegate.m in Sources */,
-				F6AF87B91E3E4DE400CA1E3B /* NotificationCenter.m in Sources */,
-				F6ED6F2D1E3E53C900431442 /* ClosureTests.swift in Sources */,
-				F6E6EF651E3F87A8007A139C /* KeyValueObserving.swift in Sources */,
-				F64CF9401E45031C00776BA2 /* ReactiveSignal.swift in Sources */,
-				F64CF9421E45032A00776BA2 /* ReactiveSignalTests.swift in Sources */,
-				F6E6EF201E3F6B82007A139C /* Responder.m in Sources */,
-				F6F1158D1E422A540014AA00 /* PerformanceTests.swift in Sources */,
-				F6F115841E41D8530014AA00 /* PromiseTests.swift in Sources */,
-				F6E6EF601E3F851F007A139C /* KeyValueObserving.m in Sources */,
-				F6E6EF1C1E3F6B66007A139C /* ResponderTests.m in Sources */,
-				F6E6EF161E3F5A42007A139C /* Invocation.m in Sources */,
-				F6E6EF181E3F5A55007A139C /* InvocationTests.m in Sources */,
-				F6ED6F2B1E3E53BC00431442 /* Closure.swift in Sources */,
-				F6AF87AA1E3E456100CA1E3B /* DelegateTests.m in Sources */,
-				F6AF87B61E3E4DD300CA1E3B /* NotificationCenterTests.swift in Sources */,
-				F6AF87BB1E3E4DF600CA1E3B /* NotificationCenterTests.m in Sources */,
+				F64CF98C1E45166200776BA2 /* PromiseTests.swift in Sources */,
+				F64CF97D1E45166200776BA2 /* Delegate.swift in Sources */,
+				F64CF9921E45166200776BA2 /* ResponderTests.swift in Sources */,
+				F64CF9781E45166200776BA2 /* Block.m in Sources */,
+				F64CF97C1E45166200776BA2 /* Delegate.m in Sources */,
+				F64CF97E1E45166200776BA2 /* DelegateTests.m in Sources */,
+				F64CF9821E45166200776BA2 /* KeyValueObserving.m in Sources */,
+				F64CF9901E45166200776BA2 /* Responder.swift in Sources */,
+				F64CF98E1E45166200776BA2 /* ReactiveSignalTests.swift in Sources */,
+				F64CF9891E45166200776BA2 /* NotificationCenterTests.swift in Sources */,
+				F64CF9881E45166200776BA2 /* NotificationCenterTests.m in Sources */,
+				F64CF98B1E45166200776BA2 /* Promise.swift in Sources */,
+				F64CF9841E45166200776BA2 /* KeyValueObservingTests.m in Sources */,
+				F64CF9911E45166200776BA2 /* ResponderTests.m in Sources */,
+				F64CF97F1E45166200776BA2 /* DelegateTests.swift in Sources */,
+				F64CF97B1E45166200776BA2 /* ClosureTests.swift in Sources */,
+				F64CF9791E45166200776BA2 /* BlockTests.m in Sources */,
+				F64CF9801E45166200776BA2 /* Invocation.m in Sources */,
+				F64CF97A1E45166200776BA2 /* Closure.swift in Sources */,
+				F64CF98F1E45166200776BA2 /* Responder.m in Sources */,
+				F64CF9871E45166200776BA2 /* NotificationCenter.swift in Sources */,
+				F64CF9861E45166200776BA2 /* NotificationCenter.m in Sources */,
+				F64CF9851E45166200776BA2 /* KeyValueObservingTests.swift in Sources */,
+				F64CF98D1E45166200776BA2 /* ReactiveSignal.swift in Sources */,
+				F64CF9931E45166200776BA2 /* PerformanceTestTools.swift in Sources */,
+				F64CF9811E45166200776BA2 /* InvocationTests.m in Sources */,
+				F64CF98A1E45166200776BA2 /* PerformanceTests.swift in Sources */,
+				F64CF9831E45166200776BA2 /* KeyValueObserving.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -542,7 +548,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6E6EF451E3F74A3007A139C /* AppDelegate.swift in Sources */,
+				F64CF9481E4514A700776BA2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,7 +594,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/CallbackTechniquesTests/CallbackTechniquesTests-Prefix.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SupportingFiles/Tests/CallbackTechniquesTests-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -637,7 +643,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/CallbackTechniquesTests/CallbackTechniquesTests-Prefix.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SupportingFiles/Tests/CallbackTechniquesTests-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -661,11 +667,11 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = CallbackTechniquesTests/Info.plist;
+				INFOPLIST_FILE = SupportingFiles/Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Alexey-Naumov.CallbackTechniquesTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "CallbackTechniquesTests/CallbackTechniquesTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "SupportingFiles/Tests/CallbackTechniquesTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CallbackTechniques.app/CallbackTechniques";
@@ -681,11 +687,11 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = CallbackTechniquesTests/Info.plist;
+				INFOPLIST_FILE = SupportingFiles/Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Alexey-Naumov.CallbackTechniquesTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "CallbackTechniquesTests/CallbackTechniquesTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "SupportingFiles/Tests/CallbackTechniquesTests-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CallbackTechniques.app/CallbackTechniques";
 			};
@@ -696,7 +702,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
-				INFOPLIST_FILE = CallbackTechniques/Info.plist;
+				INFOPLIST_FILE = SupportingFiles/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Alexey-Naumov.CallbackTechniques";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -709,7 +715,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = NO;
 				GCC_PREFIX_HEADER = "";
-				INFOPLIST_FILE = CallbackTechniques/Info.plist;
+				INFOPLIST_FILE = SupportingFiles/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Alexey-Naumov.CallbackTechniques";
 				PRODUCT_NAME = "$(TARGET_NAME)";
