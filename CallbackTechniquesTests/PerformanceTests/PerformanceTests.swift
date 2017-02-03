@@ -23,6 +23,7 @@ class PerformanceTests: XCTestCase {
       .measurePerformanceOfResponder(iterations: defaultNumber)
       .measurePerformanceOfKeyValueObserving(iterations: defaultNumber)
       .measurePerformanceOfPromise(iterations: 3000)
+      .measurePerformanceOfReactiveSignal(iterations: defaultNumber)
       .finally {
         queueExpectation.fulfill()
       }
@@ -230,6 +231,23 @@ extension PerformanceTestQueue {
             return { completion -> Void in
               promiseFulfillment = completion
               caller.fulfillPromise()
+            }
+          }
+      }
+  }
+  
+  // MARK: - Reactive Signal
+  
+  func measurePerformanceOfReactiveSignal(iterations: Int) -> PerformanceTestQueue {
+    return self
+      .enqueue { () -> PerformanceTest in
+        return PerformanceTest(subject: "[Swift: Reactive Signal]", iterations: iterations)
+          .launch { () -> RunSyncTestClosure in
+            let callee = SwiftReactiveSignalCallee()
+            let caller = SwiftReactiveSignalCaller()
+            callee.observe(signal: caller.signal)
+            return { _ in
+              caller.generateEvent()
             }
           }
       }

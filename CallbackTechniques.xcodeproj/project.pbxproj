@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F64CF9401E45031C00776BA2 /* ReactiveSignal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64CF93F1E45031C00776BA2 /* ReactiveSignal.swift */; };
+		F64CF9421E45032A00776BA2 /* ReactiveSignalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64CF9411E45032A00776BA2 /* ReactiveSignalTests.swift */; };
 		F6AF87A71E3E452B00CA1E3B /* Delegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AF87A51E3E452B00CA1E3B /* Delegate.m */; };
 		F6AF87A81E3E452B00CA1E3B /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6AF87A61E3E452B00CA1E3B /* Delegate.swift */; };
 		F6AF87AA1E3E456100CA1E3B /* DelegateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AF87A91E3E456100CA1E3B /* DelegateTests.m */; };
@@ -68,6 +70,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F64CF93F1E45031C00776BA2 /* ReactiveSignal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactiveSignal.swift; sourceTree = "<group>"; };
+		F64CF9411E45032A00776BA2 /* ReactiveSignalTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactiveSignalTests.swift; sourceTree = "<group>"; };
 		F6AF87861E3E3C3700CA1E3B /* CallbackTechniquesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CallbackTechniquesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6AF878C1E3E3C3700CA1E3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6AF87971E3E3F1800CA1E3B /* CallbackTechniquesTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CallbackTechniquesTests-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -133,6 +137,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F64CF93D1E4502E700776BA2 /* ReactiveSignal */ = {
+			isa = PBXGroup;
+			children = (
+				F64CF93E1E4502F600776BA2 /* Swift */,
+			);
+			path = ReactiveSignal;
+			sourceTree = "<group>";
+		};
+		F64CF93E1E4502F600776BA2 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				F64CF93F1E45031C00776BA2 /* ReactiveSignal.swift */,
+				F64CF9411E45032A00776BA2 /* ReactiveSignalTests.swift */,
+			);
+			name = Swift;
+			sourceTree = "<group>";
+		};
 		F6AF87691E3E3C3600CA1E3B = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +185,7 @@
 				F6E6EF1A1E3F6B55007A139C /* Responder */,
 				F6E6EF5C1E3F84E1007A139C /* KeyValueObserving */,
 				F6F1157F1E41D8260014AA00 /* Promise */,
+				F64CF93D1E4502E700776BA2 /* ReactiveSignal */,
 			);
 			path = CallbackTechniquesTests;
 			sourceTree = "<group>";
@@ -500,6 +522,8 @@
 				F6AF87B91E3E4DE400CA1E3B /* NotificationCenter.m in Sources */,
 				F6ED6F2D1E3E53C900431442 /* ClosureTests.swift in Sources */,
 				F6E6EF651E3F87A8007A139C /* KeyValueObserving.swift in Sources */,
+				F64CF9401E45031C00776BA2 /* ReactiveSignal.swift in Sources */,
+				F64CF9421E45032A00776BA2 /* ReactiveSignalTests.swift in Sources */,
 				F6E6EF201E3F6B82007A139C /* Responder.m in Sources */,
 				F6F1158D1E422A540014AA00 /* PerformanceTests.swift in Sources */,
 				F6F115841E41D8530014AA00 /* PromiseTests.swift in Sources */,
