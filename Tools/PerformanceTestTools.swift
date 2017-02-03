@@ -27,8 +27,8 @@ class PerformanceTestQueue {
   private var queue = [PerformanceTestConstructor]()
   private var completion: VoidClosure?
   
-  func enqueue(constructor: @escaping PerformanceTestConstructor) -> Self {
-    queue.append(constructor)
+  func enqueue(testConstructor: @escaping PerformanceTestConstructor) -> Self {
+    queue.append(testConstructor)
     if queue.count == 1 {
       performNextPerformanceTest()
     }
@@ -45,12 +45,12 @@ class PerformanceTestQueue {
   }
   
   private func performNextPerformanceTest() {
-    guard let constructor = queue.first else {
+    guard let testConstructor = queue.first else {
       handleEndOfQueue()
       return
     }
-    let test = constructor()
-    test.completion = { _ in
+    let test = testConstructor()
+    test.launch { 
       test.printResults()
       _ = self.queue.remove(at: 0)
       DispatchQueue.main.async(execute: self.performNextPerformanceTest)
@@ -69,73 +69,83 @@ class PerformanceTest {
   private let iterations: Int
   private let subject: Any
   private var timer = Timer()
-  private var didFinish = false
-  fileprivate var completion: VoidClosure? {
-    didSet {
-      if didFinish, let completion = completion {
-        DispatchQueue.main.async(execute: completion)
-      }
-    }
-  }
+  private var syncTestSetup: SyncTestSetupWithTearDown?
+  private var asyncTestSetup: AsyncTestSetupWithTearDown?
+  private var completion: VoidClosure?
   
   init(subject: Any, iterations: Int) {
     self.iterations = iterations
     self.subject = subject
   }
   
-  func launch(testSetup: SyncTestSetup) -> Self {
-    return launch(testSetup: { _ in
-      return (test: testSetup(), tearDown: { _ in })
+  func setup(syncTestSetup: @escaping SyncTestSetup) -> Self {
+    return setup(syncTestSetup: { _ in
+      return (test: syncTestSetup(), tearDown: { _ in })
     })
   }
   
-  func launch(testSetup: SyncTestSetupWithTearDown) -> Self {
-    for _ in 0 ..< iterations {
-      let (test, tearDown) = testSetup()
-      timer.start()
-      test()
-      timer.stop()
-      tearDown()
-    }
-    didFinish = true
-    if let completion = completion {
-      DispatchQueue.main.async(execute: completion)
-    }
+  func setup(syncTestSetup: @escaping SyncTestSetupWithTearDown) -> Self {
+    self.syncTestSetup = syncTestSetup
     return self
   }
   
-  func launch(testSetup: @escaping AsyncTestSetup) -> Self {
-    return launch(testSetup: { _ in
-      return (test: testSetup(), tearDown: { _ in })
+  func setup(asyncTestSetup: @escaping AsyncTestSetup) -> Self {
+    return setup(asyncTestSetup: { _ in
+      return (test: asyncTestSetup(), tearDown: { _ in })
     })
   }
   
-  func launch(testSetup: @escaping AsyncTestSetupWithTearDown) -> Self {
-    return launch(iteration: 0, testSetup: testSetup)
+  func setup(asyncTestSetup: @escaping AsyncTestSetupWithTearDown) -> Self {
+    self.asyncTestSetup = asyncTestSetup
+    return self
   }
   
-  private func launch(iteration: Int, testSetup: @escaping AsyncTestSetupWithTearDown) -> Self {
-    guard iteration < iterations else {
-      didFinish = true
-      completion?()
-      return self
+  func launch(completion: VoidClosure?) {
+    self.completion = completion
+    if let syncTestSetup = syncTestSetup {
+      launch(syncTestSetup: syncTestSetup)
+    } else if let asyncTestSetup = asyncTestSetup {
+      launch(iteration: 0, asyncTestSetup: asyncTestSetup)
+    } else {
+      fatalError("You should 'setup' test before launching")
     }
-    let (test, tearDown) = testSetup()
-    timer.start()
-    test {
-      self.timer.stop()
-      tearDown()
-      DispatchQueue.main.async {
-        _ = self.launch(iteration: iteration + 1, testSetup: testSetup)
-      }
-    }
-    return self
   }
   
   func printResults() {
     let nanosec = timer.averageTimeInNanoseconds
     let millisec = TimeInterval(nanosec) / 1_000_000
     print("\(subject) average time: \(nanosec)ns (\(millisec)ms)")
+  }
+  
+  private func launch(syncTestSetup: SyncTestSetupWithTearDown) {
+    for _ in 0 ..< iterations {
+      let (test, tearDown) = syncTestSetup()
+      timer.start()
+      test()
+      timer.stop()
+      tearDown()
+    }
+    if let completion = completion {
+      DispatchQueue.main.async(execute: completion)
+    }
+  }
+  
+  private func launch(iteration: Int, asyncTestSetup: @escaping AsyncTestSetupWithTearDown) {
+    guard iteration < iterations else {
+      if let completion = completion {
+        DispatchQueue.main.async(execute: completion)
+      }
+      return
+    }
+    let (test, tearDown) = asyncTestSetup()
+    timer.start()
+    test {
+      self.timer.stop()
+      tearDown()
+      DispatchQueue.main.async {
+        _ = self.launch(iteration: iteration + 1, asyncTestSetup: asyncTestSetup)
+      }
+    }
   }
 }
 
