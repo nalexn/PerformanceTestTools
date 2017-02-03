@@ -72,8 +72,8 @@
 /* Begin PBXFileReference section */
 		F64CF9451E45149D00776BA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F64CF9461E45149D00776BA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F64CF9491E45151F00776BA2 /* CallbackTechniquesTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CallbackTechniquesTests-Bridging-Header.h"; sourceTree = "<group>"; };
-		F64CF94A1E45151F00776BA2 /* CallbackTechniquesTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CallbackTechniquesTests-Prefix.pch"; sourceTree = "<group>"; };
+		F64CF9491E45151F00776BA2 /* PerformanceTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PerformanceTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		F64CF94A1E45151F00776BA2 /* PerformanceTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PerformanceTests-Prefix.pch"; sourceTree = "<group>"; };
 		F64CF94B1E45151F00776BA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F64CF94E1E45166200776BA2 /* Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Block.h; sourceTree = "<group>"; };
 		F64CF94F1E45166200776BA2 /* Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Block.m; sourceTree = "<group>"; };
@@ -109,8 +109,8 @@
 		F64CF9741E45166200776BA2 /* ResponderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponderTests.m; sourceTree = "<group>"; };
 		F64CF9751E45166200776BA2 /* ResponderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponderTests.swift; sourceTree = "<group>"; };
 		F64CF9771E45166200776BA2 /* PerformanceTestTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformanceTestTools.swift; sourceTree = "<group>"; };
-		F6AF87861E3E3C3700CA1E3B /* CallbackTechniquesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CallbackTechniquesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F6E6EF421E3F74A3007A139C /* CallbackTechniques.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CallbackTechniques.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6AF87861E3E3C3700CA1E3B /* PerformanceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PerformanceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6E6EF421E3F74A3007A139C /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6F115791E41D5580014AA00 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
 		F6F1157A1E41D5580014AA00 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
 		F6F1157B1E41D5580014AA00 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
@@ -158,8 +158,8 @@
 		F64CF9471E45149D00776BA2 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				F64CF9491E45151F00776BA2 /* CallbackTechniquesTests-Bridging-Header.h */,
-				F64CF94A1E45151F00776BA2 /* CallbackTechniquesTests-Prefix.pch */,
+				F64CF9491E45151F00776BA2 /* PerformanceTests-Bridging-Header.h */,
+				F64CF94A1E45151F00776BA2 /* PerformanceTests-Prefix.pch */,
 				F64CF94B1E45151F00776BA2 /* Info.plist */,
 			);
 			path = Tests;
@@ -395,8 +395,8 @@
 		F6AF87731E3E3C3700CA1E3B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F6AF87861E3E3C3700CA1E3B /* CallbackTechniquesTests.xctest */,
-				F6E6EF421E3F74A3007A139C /* CallbackTechniques.app */,
+				F6AF87861E3E3C3700CA1E3B /* PerformanceTests.xctest */,
+				F6E6EF421E3F74A3007A139C /* App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -414,9 +414,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F6AF87851E3E3C3700CA1E3B /* CallbackTechniquesTests */ = {
+		F6AF87851E3E3C3700CA1E3B /* PerformanceTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F6AF87921E3E3C3700CA1E3B /* Build configuration list for PBXNativeTarget "CallbackTechniquesTests" */;
+			buildConfigurationList = F6AF87921E3E3C3700CA1E3B /* Build configuration list for PBXNativeTarget "PerformanceTests" */;
 			buildPhases = (
 				F6AF87821E3E3C3700CA1E3B /* Sources */,
 				F6AF87831E3E3C3700CA1E3B /* Frameworks */,
@@ -428,14 +428,14 @@
 			dependencies = (
 				F6E6EF551E3F7542007A139C /* PBXTargetDependency */,
 			);
-			name = CallbackTechniquesTests;
+			name = PerformanceTests;
 			productName = CallbackTechniquesTests;
-			productReference = F6AF87861E3E3C3700CA1E3B /* CallbackTechniquesTests.xctest */;
+			productReference = F6AF87861E3E3C3700CA1E3B /* PerformanceTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F6E6EF411E3F74A3007A139C /* CallbackTechniques */ = {
+		F6E6EF411E3F74A3007A139C /* App */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F6E6EF531E3F74A3007A139C /* Build configuration list for PBXNativeTarget "CallbackTechniques" */;
+			buildConfigurationList = F6E6EF531E3F74A3007A139C /* Build configuration list for PBXNativeTarget "App" */;
 			buildPhases = (
 				F6E6EF3E1E3F74A3007A139C /* Sources */,
 				F6E6EF3F1E3F74A3007A139C /* Frameworks */,
@@ -445,9 +445,9 @@
 			);
 			dependencies = (
 			);
-			name = CallbackTechniques;
+			name = App;
 			productName = CallbackTechniques;
-			productReference = F6E6EF421E3F74A3007A139C /* CallbackTechniques.app */;
+			productReference = F6E6EF421E3F74A3007A139C /* App.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -472,7 +472,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F6AF876D1E3E3C3600CA1E3B /* Build configuration list for PBXProject "CallbackTechniques" */;
+			buildConfigurationList = F6AF876D1E3E3C3600CA1E3B /* Build configuration list for PBXProject "PerformanceTests" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -485,8 +485,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F6AF87851E3E3C3700CA1E3B /* CallbackTechniquesTests */,
-				F6E6EF411E3F74A3007A139C /* CallbackTechniques */,
+				F6AF87851E3E3C3700CA1E3B /* PerformanceTests */,
+				F6E6EF411E3F74A3007A139C /* App */,
 			);
 		};
 /* End PBXProject section */
@@ -557,7 +557,7 @@
 /* Begin PBXTargetDependency section */
 		F6E6EF551E3F7542007A139C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F6E6EF411E3F74A3007A139C /* CallbackTechniques */;
+			target = F6E6EF411E3F74A3007A139C /* App */;
 			targetProxy = F6E6EF541E3F7542007A139C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -594,7 +594,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/SupportingFiles/Tests/CallbackTechniquesTests-Prefix.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SupportingFiles/Tests/PerformanceTests-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -643,7 +643,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/SupportingFiles/Tests/CallbackTechniquesTests-Prefix.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SupportingFiles/Tests/PerformanceTests-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -669,12 +669,12 @@
 				);
 				INFOPLIST_FILE = SupportingFiles/Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Alexey-Naumov.CallbackTechniquesTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "Alexey-Naumov.PerformanceTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "SupportingFiles/Tests/CallbackTechniquesTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "SupportingFiles/Tests/PerformanceTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CallbackTechniques.app/CallbackTechniques";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/App.app/App";
 			};
 			name = Debug;
 		};
@@ -689,11 +689,11 @@
 				);
 				INFOPLIST_FILE = SupportingFiles/Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Alexey-Naumov.CallbackTechniquesTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "Alexey-Naumov.PerformanceTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "SupportingFiles/Tests/CallbackTechniquesTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "SupportingFiles/Tests/PerformanceTests-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CallbackTechniques.app/CallbackTechniques";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/App.app/App";
 			};
 			name = Release;
 		};
@@ -704,7 +704,7 @@
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = SupportingFiles/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Alexey-Naumov.CallbackTechniques";
+				PRODUCT_BUNDLE_IDENTIFIER = "Alexey-Naumov.App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -717,7 +717,7 @@
 				GCC_PREFIX_HEADER = "";
 				INFOPLIST_FILE = SupportingFiles/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Alexey-Naumov.CallbackTechniques";
+				PRODUCT_BUNDLE_IDENTIFIER = "Alexey-Naumov.App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -726,7 +726,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F6AF876D1E3E3C3600CA1E3B /* Build configuration list for PBXProject "CallbackTechniques" */ = {
+		F6AF876D1E3E3C3600CA1E3B /* Build configuration list for PBXProject "PerformanceTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F6AF878D1E3E3C3700CA1E3B /* Debug */,
@@ -735,7 +735,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F6AF87921E3E3C3700CA1E3B /* Build configuration list for PBXNativeTarget "CallbackTechniquesTests" */ = {
+		F6AF87921E3E3C3700CA1E3B /* Build configuration list for PBXNativeTarget "PerformanceTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F6AF87931E3E3C3700CA1E3B /* Debug */,
@@ -744,7 +744,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F6E6EF531E3F74A3007A139C /* Build configuration list for PBXNativeTarget "CallbackTechniques" */ = {
+		F6E6EF531E3F74A3007A139C /* Build configuration list for PBXNativeTarget "App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F6E6EF511E3F74A3007A139C /* Debug */,
