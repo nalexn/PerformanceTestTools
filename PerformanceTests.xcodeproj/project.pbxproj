@@ -36,6 +36,7 @@
 		F64CF9911E45166200776BA2 /* ResponderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F64CF9741E45166200776BA2 /* ResponderTests.m */; };
 		F64CF9921E45166200776BA2 /* ResponderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64CF9751E45166200776BA2 /* ResponderTests.swift */; };
 		F64CF9931E45166200776BA2 /* PerformanceTestTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64CF9771E45166200776BA2 /* PerformanceTestTools.swift */; };
+		F6BDBC8D1E451F59002FCE10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6BDBC8C1E451F59002FCE10 /* LaunchScreen.storyboard */; };
 		F6F1157C1E41D5580014AA00 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F115791E41D5580014AA00 /* PromiseKit.framework */; };
 		F6F1157D1E41D5580014AA00 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F1157A1E41D5580014AA00 /* ReactiveSwift.framework */; };
 		F6F1157E1E41D5580014AA00 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F1157B1E41D5580014AA00 /* Result.framework */; };
@@ -110,6 +111,7 @@
 		F64CF9751E45166200776BA2 /* ResponderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponderTests.swift; sourceTree = "<group>"; };
 		F64CF9771E45166200776BA2 /* PerformanceTestTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformanceTestTools.swift; sourceTree = "<group>"; };
 		F6AF87861E3E3C3700CA1E3B /* PerformanceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PerformanceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6BDBC8C1E451F59002FCE10 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F6E6EF421E3F74A3007A139C /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6F115791E41D5580014AA00 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
 		F6F1157A1E41D5580014AA00 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 			children = (
 				F64CF9451E45149D00776BA2 /* AppDelegate.swift */,
 				F64CF9461E45149D00776BA2 /* Info.plist */,
+				F6BDBC8C1E451F59002FCE10 /* LaunchScreen.storyboard */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -503,6 +506,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6BDBC8D1E451F59002FCE10 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
