@@ -25,9 +25,9 @@ class PerformanceTests: XCTestCase {
       .measurePerformanceOfInvocation(iterations: syncTestIterations)
       .measurePerformanceOfResponder(iterations: syncTestIterations)
       .measurePerformanceOfKeyValueObserving(iterations: syncTestIterations)
-      .measurePerformanceOfPromise(iterations: asyncTestIterations)
-      .measurePerformanceOfSignal(iterations: syncTestIterations)
-      .measurePerformanceOfStreamOfValues(iterations: syncTestIterations)
+      .measurePerformanceOfPromiseKit(iterations: asyncTestIterations)
+      .measurePerformanceOfSignals(iterations: syncTestIterations)
+      .measurePerformanceOfReactiveSwift(iterations: syncTestIterations)
       .finally {
         queueExpectation.fulfill()
       }
@@ -242,10 +242,10 @@ extension PerformanceTestQueue {
   
   // MARK: - Promise
   
-  func measurePerformanceOfPromise(iterations: Int) -> PerformanceTestQueue {
+  func measurePerformanceOfPromiseKit(iterations: Int) -> PerformanceTestQueue {
     return self
       .enqueue { () -> PerformanceTest in
-        return PerformanceTest(subject: "[Swift: Promise]", iterations: iterations)
+        return PerformanceTest(subject: "[Swift: PromiseKit]", iterations: iterations)
           .setup { () -> RunAsyncTestClosure in
             let caller = SwiftPromiseCaller()
             var promiseFulfillment: VoidClosure!
@@ -262,10 +262,10 @@ extension PerformanceTestQueue {
   
   // MARK: - Signal
   
-  func measurePerformanceOfSignal(iterations: Int) -> PerformanceTestQueue {
+  func measurePerformanceOfSignals(iterations: Int) -> PerformanceTestQueue {
     return self
       .enqueue { () -> PerformanceTest in
-        return PerformanceTest(subject: "[Swift: Signal]", iterations: iterations)
+        return PerformanceTest(subject: "[Swift: Signals]", iterations: iterations)
           .setup { () -> RunSyncTestClosure in
             let callee = SwiftSignalCallee()
             let caller = SwiftSignalCaller()
@@ -279,10 +279,10 @@ extension PerformanceTestQueue {
   
   // MARK: - Stream of Values
   
-  func measurePerformanceOfStreamOfValues(iterations: Int) -> PerformanceTestQueue {
+  func measurePerformanceOfReactiveSwift(iterations: Int) -> PerformanceTestQueue {
     return self
       .enqueue { () -> PerformanceTest in
-        return PerformanceTest(subject: "[Swift: Stream of Values]", iterations: iterations)
+        return PerformanceTest(subject: "[Swift: ReactiveSwift]", iterations: iterations)
           .setup { () -> RunSyncTestClosure in
             let callee = SwiftStreamOfValuesCallee()
             let caller = SwiftStreamOfValuesCaller()
