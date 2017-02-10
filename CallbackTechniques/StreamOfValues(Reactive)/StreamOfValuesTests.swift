@@ -15,7 +15,7 @@ class SwiftStreamOfValuesTests: XCTestCase {
     super.setUp()
     callee = SwiftStreamOfValuesCallee()
     caller = SwiftStreamOfValuesCaller()
-    callee.observe(signal: caller.signal)
+    callee.observe(stream: caller.stream)
   }
   
   func testConnectivity() {

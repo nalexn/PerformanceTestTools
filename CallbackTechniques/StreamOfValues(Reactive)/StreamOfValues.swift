@@ -9,15 +9,15 @@
 import ReactiveSwift
 import Result
 
-typealias TestSignal = Signal<Void, NoError>
+typealias TestStream = Signal<Void, NoError>
 
 class SwiftStreamOfValuesCaller {
   
   private var observer: Observer<Void, NoError>!
-  var signal: TestSignal!
+  var stream: TestStream!
   
   init() {
-    signal = TestSignal { observer in
+    stream = TestStream { observer in
       self.observer = observer
       return nil
     }
@@ -32,8 +32,8 @@ class SwiftStreamOfValuesCallee {
   
   var wasCalled = false
   
-  func observe(signal: TestSignal) {
-    signal.observeValues { [weak self] _ in
+  func observe(stream: TestStream) {
+    stream.observeValues { [weak self] _ in
       self?.wasCalled = true
     }
   }

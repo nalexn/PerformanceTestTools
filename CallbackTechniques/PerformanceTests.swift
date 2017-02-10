@@ -268,7 +268,7 @@ extension PerformanceTestQueue {
           .setup { () -> RunSyncTestClosure in
             let callee = SwiftStreamOfValuesCallee()
             let caller = SwiftStreamOfValuesCaller()
-            callee.observe(signal: caller.signal)
+            callee.observe(stream: caller.stream)
             return { _ in
               caller.generateEvent()
             }
