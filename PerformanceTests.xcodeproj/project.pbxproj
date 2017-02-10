@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F647DDF71E4E680200936169 /* StreamOfValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = F647DDF51E4E680200936169 /* StreamOfValues.swift */; };
+		F647DDF81E4E680200936169 /* StreamOfValuesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F647DDF61E4E680200936169 /* StreamOfValuesTests.swift */; };
 		F64CF9481E4514A700776BA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64CF9451E45149D00776BA2 /* AppDelegate.swift */; };
 		F64CF9781E45166200776BA2 /* Block.m in Sources */ = {isa = PBXBuildFile; fileRef = F64CF94F1E45166200776BA2 /* Block.m */; };
 		F64CF9791E45166200776BA2 /* BlockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F64CF9501E45166200776BA2 /* BlockTests.m */; };
@@ -29,8 +31,6 @@
 		F64CF98A1E45166200776BA2 /* PerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64CF9691E45166200776BA2 /* PerformanceTests.swift */; };
 		F64CF98B1E45166200776BA2 /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64CF96B1E45166200776BA2 /* Promise.swift */; };
 		F64CF98C1E45166200776BA2 /* PromiseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64CF96C1E45166200776BA2 /* PromiseTests.swift */; };
-		F64CF98D1E45166200776BA2 /* ReactiveSignal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64CF96E1E45166200776BA2 /* ReactiveSignal.swift */; };
-		F64CF98E1E45166200776BA2 /* ReactiveSignalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64CF96F1E45166200776BA2 /* ReactiveSignalTests.swift */; };
 		F64CF98F1E45166200776BA2 /* Responder.m in Sources */ = {isa = PBXBuildFile; fileRef = F64CF9721E45166200776BA2 /* Responder.m */; };
 		F64CF9901E45166200776BA2 /* Responder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64CF9731E45166200776BA2 /* Responder.swift */; };
 		F64CF9911E45166200776BA2 /* ResponderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F64CF9741E45166200776BA2 /* ResponderTests.m */; };
@@ -71,6 +71,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F647DDF51E4E680200936169 /* StreamOfValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamOfValues.swift; sourceTree = "<group>"; };
+		F647DDF61E4E680200936169 /* StreamOfValuesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamOfValuesTests.swift; sourceTree = "<group>"; };
 		F64CF9451E45149D00776BA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F64CF9461E45149D00776BA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F64CF9491E45151F00776BA2 /* PerformanceTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PerformanceTests-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -102,8 +104,6 @@
 		F64CF9691E45166200776BA2 /* PerformanceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformanceTests.swift; sourceTree = "<group>"; };
 		F64CF96B1E45166200776BA2 /* Promise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Promise.swift; sourceTree = "<group>"; };
 		F64CF96C1E45166200776BA2 /* PromiseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromiseTests.swift; sourceTree = "<group>"; };
-		F64CF96E1E45166200776BA2 /* ReactiveSignal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactiveSignal.swift; sourceTree = "<group>"; };
-		F64CF96F1E45166200776BA2 /* ReactiveSignalTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactiveSignalTests.swift; sourceTree = "<group>"; };
 		F64CF9711E45166200776BA2 /* Responder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Responder.h; sourceTree = "<group>"; };
 		F64CF9721E45166200776BA2 /* Responder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Responder.m; sourceTree = "<group>"; };
 		F64CF9731E45166200776BA2 /* Responder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Responder.swift; sourceTree = "<group>"; };
@@ -139,6 +139,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F647DDF41E4E680200936169 /* StreamOfValues(Reactive) */ = {
+			isa = PBXGroup;
+			children = (
+				F647DDF51E4E680200936169 /* StreamOfValues.swift */,
+				F647DDF61E4E680200936169 /* StreamOfValuesTests.swift */,
+			);
+			path = "StreamOfValues(Reactive)";
+			sourceTree = "<group>";
+		};
 		F64CF9431E45149D00776BA2 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,7 +188,7 @@
 				F64CF9701E45166200776BA2 /* Responder */,
 				F64CF95D1E45166200776BA2 /* KeyValueObserving */,
 				F64CF96A1E45166200776BA2 /* Promise */,
-				F64CF96D1E45166200776BA2 /* ReactiveSignal */,
+				F647DDF41E4E680200936169 /* StreamOfValues(Reactive) */,
 			);
 			path = CallbackTechniques;
 			sourceTree = "<group>";
@@ -234,14 +243,6 @@
 				F64CF9A01E4516CA00776BA2 /* Swift */,
 			);
 			path = Promise;
-			sourceTree = "<group>";
-		};
-		F64CF96D1E45166200776BA2 /* ReactiveSignal */ = {
-			isa = PBXGroup;
-			children = (
-				F64CF9A11E4516CE00776BA2 /* Swift */,
-			);
-			path = ReactiveSignal;
 			sourceTree = "<group>";
 		};
 		F64CF9701E45166200776BA2 /* Responder */ = {
@@ -371,15 +372,6 @@
 			children = (
 				F64CF96B1E45166200776BA2 /* Promise.swift */,
 				F64CF96C1E45166200776BA2 /* PromiseTests.swift */,
-			);
-			name = Swift;
-			sourceTree = "<group>";
-		};
-		F64CF9A11E4516CE00776BA2 /* Swift */ = {
-			isa = PBXGroup;
-			children = (
-				F64CF96E1E45166200776BA2 /* ReactiveSignal.swift */,
-				F64CF96F1E45166200776BA2 /* ReactiveSignalTests.swift */,
 			);
 			name = Swift;
 			sourceTree = "<group>";
@@ -520,12 +512,12 @@
 				F64CF98C1E45166200776BA2 /* PromiseTests.swift in Sources */,
 				F64CF97D1E45166200776BA2 /* Delegate.swift in Sources */,
 				F64CF9921E45166200776BA2 /* ResponderTests.swift in Sources */,
+				F647DDF71E4E680200936169 /* StreamOfValues.swift in Sources */,
 				F64CF9781E45166200776BA2 /* Block.m in Sources */,
 				F64CF97C1E45166200776BA2 /* Delegate.m in Sources */,
 				F64CF97E1E45166200776BA2 /* DelegateTests.m in Sources */,
 				F64CF9821E45166200776BA2 /* KeyValueObserving.m in Sources */,
 				F64CF9901E45166200776BA2 /* Responder.swift in Sources */,
-				F64CF98E1E45166200776BA2 /* ReactiveSignalTests.swift in Sources */,
 				F64CF9891E45166200776BA2 /* NotificationCenterTests.swift in Sources */,
 				F64CF9881E45166200776BA2 /* NotificationCenterTests.m in Sources */,
 				F64CF98B1E45166200776BA2 /* Promise.swift in Sources */,
@@ -537,10 +529,10 @@
 				F64CF9801E45166200776BA2 /* Invocation.m in Sources */,
 				F64CF97A1E45166200776BA2 /* Closure.swift in Sources */,
 				F64CF98F1E45166200776BA2 /* Responder.m in Sources */,
+				F647DDF81E4E680200936169 /* StreamOfValuesTests.swift in Sources */,
 				F64CF9871E45166200776BA2 /* NotificationCenter.swift in Sources */,
 				F64CF9861E45166200776BA2 /* NotificationCenter.m in Sources */,
 				F64CF9851E45166200776BA2 /* KeyValueObservingTests.swift in Sources */,
-				F64CF98D1E45166200776BA2 /* ReactiveSignal.swift in Sources */,
 				F64CF9931E45166200776BA2 /* PerformanceTestTools.swift in Sources */,
 				F64CF9811E45166200776BA2 /* InvocationTests.m in Sources */,
 				F64CF98A1E45166200776BA2 /* PerformanceTests.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  ReactiveSignal.swift
+//  StreamOfValues.swift
 //  CallbackTechniques
 //
 //  Created by Alexey Naumov on 04/02/2017.
@@ -11,7 +11,7 @@ import Result
 
 typealias TestSignal = Signal<Void, NoError>
 
-class SwiftReactiveSignalCaller {
+class SwiftStreamOfValuesCaller {
   
   private var observer: Observer<Void, NoError>!
   var signal: TestSignal!
@@ -28,7 +28,7 @@ class SwiftReactiveSignalCaller {
   }
 }
 
-class SwiftReactiveSignalCallee {
+class SwiftStreamOfValuesCallee {
   
   var wasCalled = false
   

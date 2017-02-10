@@ -1,20 +1,20 @@
 //
-//  ReactiveSignalTests.swift
+//  StreamOfValuesTests.swift
 //  CallbackTechniques
 //
 //  Created by Alexey Naumov on 04/02/2017.
 //  Copyright © 2017 Alexey Naumov. All rights reserved.
 //
 
-class SwiftReactiveSignalTests: XCTestCase {
+class SwiftStreamOfValuesTests: XCTestCase {
   
-  var callee: SwiftReactiveSignalCallee!
-  var caller: SwiftReactiveSignalCaller!
+  var callee: SwiftStreamOfValuesCallee!
+  var caller: SwiftStreamOfValuesCaller!
   
   override func setUp() {
     super.setUp()
-    callee = SwiftReactiveSignalCallee()
-    caller = SwiftReactiveSignalCaller()
+    callee = SwiftStreamOfValuesCallee()
+    caller = SwiftStreamOfValuesCaller()
     callee.observe(signal: caller.signal)
   }
   
