@@ -1,5 +1,5 @@
 //
-//  PerformanceTests.swift
+//  CallbacksPerformanceTests.swift
 //  CallbackTechniques
 //
 //  Created by Alexey Naumov on 01/02/2017.
@@ -7,9 +7,9 @@
 //
 
 
-class PerformanceTests: XCTestCase {
+class CallbacksPerformanceTests: XCTestCase {
   
-  func testPerformance() {
+  func testPerformanceOfCallbackTechniques() {
     
     let queueExpectation = expectation(description: "Queue expectation")
     

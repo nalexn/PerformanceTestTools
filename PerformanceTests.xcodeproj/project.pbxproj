@@ -32,7 +32,7 @@
 		F64CF9871E45166200776BA2 /* NotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64CF9661E45166200776BA2 /* NotificationCenter.swift */; };
 		F64CF9881E45166200776BA2 /* NotificationCenterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F64CF9671E45166200776BA2 /* NotificationCenterTests.m */; };
 		F64CF9891E45166200776BA2 /* NotificationCenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64CF9681E45166200776BA2 /* NotificationCenterTests.swift */; };
-		F64CF98A1E45166200776BA2 /* PerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64CF9691E45166200776BA2 /* PerformanceTests.swift */; };
+		F64CF98A1E45166200776BA2 /* CallbacksPerformanceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64CF9691E45166200776BA2 /* CallbacksPerformanceTests.swift */; };
 		F64CF98B1E45166200776BA2 /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64CF96B1E45166200776BA2 /* Promise.swift */; };
 		F64CF98C1E45166200776BA2 /* PromiseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64CF96C1E45166200776BA2 /* PromiseTests.swift */; };
 		F64CF98F1E45166200776BA2 /* Responder.m in Sources */ = {isa = PBXBuildFile; fileRef = F64CF9721E45166200776BA2 /* Responder.m */; };
@@ -109,7 +109,7 @@
 		F64CF9661E45166200776BA2 /* NotificationCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenter.swift; sourceTree = "<group>"; };
 		F64CF9671E45166200776BA2 /* NotificationCenterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationCenterTests.m; sourceTree = "<group>"; };
 		F64CF9681E45166200776BA2 /* NotificationCenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationCenterTests.swift; sourceTree = "<group>"; };
-		F64CF9691E45166200776BA2 /* PerformanceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerformanceTests.swift; sourceTree = "<group>"; };
+		F64CF9691E45166200776BA2 /* CallbacksPerformanceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CallbacksPerformanceTests.swift; sourceTree = "<group>"; };
 		F64CF96B1E45166200776BA2 /* Promise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Promise.swift; sourceTree = "<group>"; };
 		F64CF96C1E45166200776BA2 /* PromiseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromiseTests.swift; sourceTree = "<group>"; };
 		F64CF9711E45166200776BA2 /* Responder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Responder.h; sourceTree = "<group>"; };
@@ -214,7 +214,7 @@
 		F64CF94C1E45166200776BA2 /* CallbackTechniques */ = {
 			isa = PBXGroup;
 			children = (
-				F64CF9691E45166200776BA2 /* PerformanceTests.swift */,
+				F64CF9691E45166200776BA2 /* CallbacksPerformanceTests.swift */,
 				F64CF9531E45166200776BA2 /* Delegate */,
 				F64CF9631E45166200776BA2 /* NotificationCenter */,
 				F64CF94D1E45166200776BA2 /* Closure(Block) */,
@@ -573,7 +573,7 @@
 				F64CF9851E45166200776BA2 /* KeyValueObservingTests.swift in Sources */,
 				F64CF9931E45166200776BA2 /* PerformanceTestTools.swift in Sources */,
 				F64CF9811E45166200776BA2 /* InvocationTests.m in Sources */,
-				F64CF98A1E45166200776BA2 /* PerformanceTests.swift in Sources */,
+				F64CF98A1E45166200776BA2 /* CallbacksPerformanceTests.swift in Sources */,
 				F64CF9831E45166200776BA2 /* KeyValueObserving.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
