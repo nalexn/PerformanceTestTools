@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		F647DDF71E4E680200936169 /* StreamOfValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = F647DDF51E4E680200936169 /* StreamOfValues.swift */; };
 		F647DDF81E4E680200936169 /* StreamOfValuesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F647DDF61E4E680200936169 /* StreamOfValuesTests.swift */; };
+		F647DDFD1E4E699100936169 /* Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F647DDFC1E4E699100936169 /* Signal.swift */; };
+		F647DDFF1E4E69A300936169 /* SignalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F647DDFE1E4E69A300936169 /* SignalTests.swift */; };
+		F647DE011E4E6CD200936169 /* Signals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F647DE001E4E6CD200936169 /* Signals.framework */; };
+		F647DE021E4E6D0C00936169 /* Signals.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F647DE001E4E6CD200936169 /* Signals.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F64CF9481E4514A700776BA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F64CF9451E45149D00776BA2 /* AppDelegate.swift */; };
 		F64CF9781E45166200776BA2 /* Block.m in Sources */ = {isa = PBXBuildFile; fileRef = F64CF94F1E45166200776BA2 /* Block.m */; };
 		F64CF9791E45166200776BA2 /* BlockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F64CF9501E45166200776BA2 /* BlockTests.m */; };
@@ -62,6 +66,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				F647DE021E4E6D0C00936169 /* Signals.framework in CopyFiles */,
 				F6F115861E41EF690014AA00 /* PromiseKit.framework in CopyFiles */,
 				F6F115871E41EF690014AA00 /* ReactiveSwift.framework in CopyFiles */,
 				F6F115881E41EF690014AA00 /* Result.framework in CopyFiles */,
@@ -73,6 +78,9 @@
 /* Begin PBXFileReference section */
 		F647DDF51E4E680200936169 /* StreamOfValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamOfValues.swift; sourceTree = "<group>"; };
 		F647DDF61E4E680200936169 /* StreamOfValuesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamOfValuesTests.swift; sourceTree = "<group>"; };
+		F647DDFC1E4E699100936169 /* Signal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signal.swift; sourceTree = "<group>"; };
+		F647DDFE1E4E69A300936169 /* SignalTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignalTests.swift; sourceTree = "<group>"; };
+		F647DE001E4E6CD200936169 /* Signals.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Signals.framework; path = Carthage/Build/iOS/Signals.framework; sourceTree = "<group>"; };
 		F64CF9451E45149D00776BA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F64CF9461E45149D00776BA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F64CF9491E45151F00776BA2 /* PerformanceTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PerformanceTests-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -126,6 +134,7 @@
 				F6F1157C1E41D5580014AA00 /* PromiseKit.framework in Frameworks */,
 				F6F1157D1E41D5580014AA00 /* ReactiveSwift.framework in Frameworks */,
 				F6F1157E1E41D5580014AA00 /* Result.framework in Frameworks */,
+				F647DE011E4E6CD200936169 /* Signals.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,10 +151,35 @@
 		F647DDF41E4E680200936169 /* StreamOfValues(Reactive) */ = {
 			isa = PBXGroup;
 			children = (
+				F647DDFB1E4E697D00936169 /* Swift */,
+			);
+			path = "StreamOfValues(Reactive)";
+			sourceTree = "<group>";
+		};
+		F647DDF91E4E696D00936169 /* Signal */ = {
+			isa = PBXGroup;
+			children = (
+				F647DDFA1E4E697100936169 /* Swift */,
+			);
+			path = Signal;
+			sourceTree = "<group>";
+		};
+		F647DDFA1E4E697100936169 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				F647DDFC1E4E699100936169 /* Signal.swift */,
+				F647DDFE1E4E69A300936169 /* SignalTests.swift */,
+			);
+			name = Swift;
+			sourceTree = "<group>";
+		};
+		F647DDFB1E4E697D00936169 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
 				F647DDF51E4E680200936169 /* StreamOfValues.swift */,
 				F647DDF61E4E680200936169 /* StreamOfValuesTests.swift */,
 			);
-			path = "StreamOfValues(Reactive)";
+			name = Swift;
 			sourceTree = "<group>";
 		};
 		F64CF9431E45149D00776BA2 /* SupportingFiles */ = {
@@ -188,6 +222,7 @@
 				F64CF9701E45166200776BA2 /* Responder */,
 				F64CF95D1E45166200776BA2 /* KeyValueObserving */,
 				F64CF96A1E45166200776BA2 /* Promise */,
+				F647DDF91E4E696D00936169 /* Signal */,
 				F647DDF41E4E680200936169 /* StreamOfValues(Reactive) */,
 			);
 			path = CallbackTechniques;
@@ -399,6 +434,7 @@
 		F6F115781E41D5580014AA00 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F647DE001E4E6CD200936169 /* Signals.framework */,
 				F6F115791E41D5580014AA00 /* PromiseKit.framework */,
 				F6F1157A1E41D5580014AA00 /* ReactiveSwift.framework */,
 				F6F1157B1E41D5580014AA00 /* Result.framework */,
@@ -513,6 +549,7 @@
 				F64CF97D1E45166200776BA2 /* Delegate.swift in Sources */,
 				F64CF9921E45166200776BA2 /* ResponderTests.swift in Sources */,
 				F647DDF71E4E680200936169 /* StreamOfValues.swift in Sources */,
+				F647DDFD1E4E699100936169 /* Signal.swift in Sources */,
 				F64CF9781E45166200776BA2 /* Block.m in Sources */,
 				F64CF97C1E45166200776BA2 /* Delegate.m in Sources */,
 				F64CF97E1E45166200776BA2 /* DelegateTests.m in Sources */,
@@ -531,6 +568,7 @@
 				F64CF98F1E45166200776BA2 /* Responder.m in Sources */,
 				F647DDF81E4E680200936169 /* StreamOfValuesTests.swift in Sources */,
 				F64CF9871E45166200776BA2 /* NotificationCenter.swift in Sources */,
+				F647DDFF1E4E69A300936169 /* SignalTests.swift in Sources */,
 				F64CF9861E45166200776BA2 /* NotificationCenter.m in Sources */,
 				F64CF9851E45166200776BA2 /* KeyValueObservingTests.swift in Sources */,
 				F64CF9931E45166200776BA2 /* PerformanceTestTools.swift in Sources */,

@@ -26,6 +26,7 @@ class PerformanceTests: XCTestCase {
       .measurePerformanceOfResponder(iterations: syncTestIterations)
       .measurePerformanceOfKeyValueObserving(iterations: syncTestIterations)
       .measurePerformanceOfPromise(iterations: asyncTestIterations)
+      .measurePerformanceOfSignal(iterations: syncTestIterations)
       .measurePerformanceOfStreamOfValues(iterations: syncTestIterations)
       .finally {
         queueExpectation.fulfill()
@@ -259,12 +260,29 @@ extension PerformanceTestQueue {
       }
   }
   
-  // MARK: - Reactive Signal
+  // MARK: - Signal
+  
+  func measurePerformanceOfSignal(iterations: Int) -> PerformanceTestQueue {
+    return self
+      .enqueue { () -> PerformanceTest in
+        return PerformanceTest(subject: "[Swift: Signal]", iterations: iterations)
+          .setup { () -> RunSyncTestClosure in
+            let callee = SwiftSignalCallee()
+            let caller = SwiftSignalCaller()
+            callee.observe(signal: caller.signal)
+            return { _ in
+              caller.fireSignal()
+            }
+        }
+      }
+  }
+  
+  // MARK: - Stream of Values
   
   func measurePerformanceOfStreamOfValues(iterations: Int) -> PerformanceTestQueue {
     return self
       .enqueue { () -> PerformanceTest in
-        return PerformanceTest(subject: "[Swift: Stream of Values (Reactive)]", iterations: iterations)
+        return PerformanceTest(subject: "[Swift: Stream of Values]", iterations: iterations)
           .setup { () -> RunSyncTestClosure in
             let callee = SwiftStreamOfValuesCallee()
             let caller = SwiftStreamOfValuesCaller()
