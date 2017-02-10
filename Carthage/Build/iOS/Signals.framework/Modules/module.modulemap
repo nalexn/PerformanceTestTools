@@ -1,0 +1,10 @@
+framework module Signals {
+  umbrella header "Signals.h"
+
+  export *
+  module * { export * }
+}
+
+module Signals.Swift {
+    header "Signals-Swift.h"
+}

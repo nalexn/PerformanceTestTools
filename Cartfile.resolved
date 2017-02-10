@@ -1,3 +1,4 @@
 github "mxcl/PromiseKit" "4.1.7"
 github "antitypical/Result" "3.1.0"
+github "artman/Signals" "4.0.0"
 github "ReactiveCocoa/ReactiveSwift" "1.0.0"
