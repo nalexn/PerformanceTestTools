@@ -20,12 +20,23 @@ typealias AsyncTestSetupWithTearDown = () -> (test: RunAsyncTestClosure, tearDow
 
 typealias PerformanceTestConstructor = () -> PerformanceTest
 
+typealias TimeUnit = UInt64
+typealias PerformanceTestOverhead = (sync: TimeUnit, async: TimeUnit)
+typealias PerformanceTestResult = (title: Any, iterations: Int, nanosec: TimeUnit)
+typealias PerformanceTestCompletion = (PerformanceTestResult) -> Void
+
 // MARK: PerformanceTestQueue
 
 class PerformanceTestQueue {
   
   private var queue = [PerformanceTestConstructor]()
   private var completion: VoidClosure?
+  private var overhead = PerformanceTestOverhead(0, 0)
+  private let testCompletion: PerformanceTestCompletion
+  
+  init(testCompletion: @escaping PerformanceTestCompletion) {
+    self.testCompletion = testCompletion
+  }
   
   func enqueue(testConstructor: @escaping PerformanceTestConstructor) -> Self {
     queue.append(testConstructor)
@@ -50,10 +61,25 @@ class PerformanceTestQueue {
       return
     }
     let test = testConstructor()
-    test.launch { 
-      test.printResults()
+    test.launch {
+      let nanosec = test.averageTimeInNanoseconds() - self.correctionForTest(test: test)
+      self.testCompletion((test.title, test.iterations, nanosec))
       _ = self.queue.remove(at: 0)
       DispatchQueue.main.async(execute: self.performNextPerformanceTest)
+    }
+  }
+  
+  private func correctionForTest(test: PerformanceTest) -> TimeUnit {
+    switch test.type {
+    case .normal:
+      return test.isAsync() ? overhead.async : overhead.sync
+    case .overheadMeasurement:
+      if test.isAsync() {
+        overhead.async = test.averageTimeInNanoseconds()
+      } else {
+        overhead.sync = test.averageTimeInNanoseconds()
+      }
+      return 0
     }
   }
   
@@ -66,16 +92,23 @@ class PerformanceTestQueue {
 // MARK: PerformanceTest
 
 class PerformanceTest {
-  private let iterations: Int
-  private let subject: Any
-  private var timer = Timer()
+  fileprivate let iterations: Int
+  fileprivate let title: Any
+  fileprivate let type: `Type`
   private var syncTestSetup: SyncTestSetupWithTearDown?
   private var asyncTestSetup: AsyncTestSetupWithTearDown?
+  private var timer = Timer()
   private var completion: VoidClosure?
   
-  init(subject: Any, iterations: Int) {
+  enum `Type` {
+    case normal
+    case overheadMeasurement
+  }
+  
+  init(title: Any, iterations: Int, type: `Type` = .normal) {
     self.iterations = iterations
-    self.subject = subject
+    self.title = title
+    self.type = type
   }
   
   func setup(syncTestSetup: @escaping SyncTestSetup) -> Self {
@@ -111,10 +144,12 @@ class PerformanceTest {
     }
   }
   
-  func printResults() {
-    let nanosec = timer.averageTimeInNanoseconds
-    let millisec = TimeInterval(nanosec) / 1_000_000
-    print("\(subject) average time: \(nanosec)ns (\(millisec)ms)")
+  func isAsync() -> Bool {
+    return asyncTestSetup != nil
+  }
+  
+  func averageTimeInNanoseconds() -> TimeUnit {
+    return timer.averageTimeInNanoseconds
   }
   
   private func launch(syncTestSetup: SyncTestSetupWithTearDown) {
@@ -153,8 +188,8 @@ class PerformanceTest {
 
 fileprivate struct Timer {
   private static var baseInfo: mach_timebase_info = mach_timebase_info(numer: 0, denom: 0)
-  private var startTime: UInt64 = 0
-  private var cumulativeTime: UInt64 = 0
+  private var startTime: TimeUnit = 0
+  private var cumulativeTime: TimeUnit = 0
   private var numberOfStarts: Int = 0
   
   init() {
@@ -170,7 +205,7 @@ fileprivate struct Timer {
     cumulativeTime += mach_absolute_time() - startTime
   }
   
-  var averageTimeInNanoseconds: UInt64 {
+  var averageTimeInNanoseconds: TimeUnit {
     guard numberOfStarts > 0 else {
       return 0
     }
