@@ -264,18 +264,18 @@ extension PerformanceTestQueue {
       }
   }
   
-  // MARK: - Signal
+  // MARK: - Event
   
   func measurePerformanceOfSignals(iterations: Int) -> PerformanceTestQueue {
     return self
       .enqueue { () -> PerformanceTest in
         return PerformanceTest(title: "[Swift: Signals]", iterations: iterations)
           .setup { () -> RunSyncTestClosure in
-            let callee = SwiftSignalCallee()
-            let caller = SwiftSignalCaller()
-            callee.observe(signal: caller.signal)
+            let callee = SwiftEventCallee()
+            let caller = SwiftEventCaller()
+            callee.observe(Event: caller.Event)
             return { _ in
-              caller.fireSignal()
+              caller.triggerEvent()
             }
         }
       }

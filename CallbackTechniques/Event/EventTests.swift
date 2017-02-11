@@ -1,5 +1,5 @@
 //
-//  SignalTests.swift
+//  EventTests.swift
 //  PerformanceTests
 //
 //  Created by Alexey Naumov on 11/02/2017.
@@ -8,21 +8,21 @@
 
 import XCTest
 
-class SwiftSignalTests: XCTestCase {
+class SwiftEventTests: XCTestCase {
   
-  var callee: SwiftSignalCallee!
-  var caller: SwiftSignalCaller!
+  var callee: SwiftEventCallee!
+  var caller: SwiftEventCaller!
   
   override func setUp() {
     super.setUp()
-    callee = SwiftSignalCallee()
-    caller = SwiftSignalCaller()
-    callee.observe(signal: caller.signal)
+    callee = SwiftEventCallee()
+    caller = SwiftEventCaller()
+    callee.observe(Event: caller.Event)
   }
   
   func testConnectivity() {
     XCTAssertFalse(callee.wasCalled)
-    caller.fireSignal()
+    caller.triggerEvent()
     XCTAssertTrue(callee.wasCalled)
   }
 }
