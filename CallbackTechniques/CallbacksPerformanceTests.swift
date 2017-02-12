@@ -285,11 +285,24 @@ extension PerformanceTestQueue {
       .enqueue { () -> PerformanceTest in
         return PerformanceTest(title: "[Swift: Signals]", iterations: iterations)
           .setup { () -> RunSyncTestClosure in
-            let callee = SwiftEventCallee()
-            let caller = SwiftEventCaller()
-            callee.observe(Event: caller.Event)
+            let callee = SwiftSignalsEventCallee()
+            let caller = SwiftSignalsEventCaller()
+            callee.observe(event: caller.event)
             return { _ in
               caller.triggerEvent()
+              _ = callee
+            }
+        }
+      }
+      .enqueue { () -> PerformanceTest in
+        return PerformanceTest(title: "[Swift: EmitterKit]", iterations: iterations)
+          .setup { () -> RunSyncTestClosure in
+            let callee = SwiftEmitterKitEventCallee()
+            let caller = SwiftEmitterKitEventCaller()
+            callee.observe(event: caller.event)
+            return { _ in
+              caller.triggerEvent()
+              _ = callee
             }
         }
       }

@@ -7,23 +7,50 @@
 //
 
 import Signals
+import EmitterKit
 
-typealias TestEvent = Signal<Void>
+// MARK: Signals
 
-class SwiftEventCaller {
-  let Event = TestEvent()
+typealias TestSignalsEvent = Signals.Signal<Void>
+
+class SwiftSignalsEventCaller {
+  let event = TestSignalsEvent()
   
   func triggerEvent() {
-    Event.fire()
+    event.fire()
   }
 }
 
-class SwiftEventCallee {
+class SwiftSignalsEventCallee {
   
   var wasCalled = false
   
-  func observe(Event: TestEvent) {
-    Event.subscribe(on: self) { [weak self] _ in
+  func observe(event: TestSignalsEvent) {
+    event.subscribe(on: self) { [weak self] _ in
+      self?.wasCalled = true
+    }
+  }
+}
+
+// MARK: EmitterKit
+
+typealias TestEmitterKitEvent = EmitterKit.Event<Void>
+
+class SwiftEmitterKitEventCaller {
+  let event = TestEmitterKitEvent()
+  
+  func triggerEvent() {
+    event.emit()
+  }
+}
+
+class SwiftEmitterKitEventCallee {
+  
+  private var listener: EmitterKit.EventListener<Void>!
+  var wasCalled = false
+  
+  func observe(event: TestEmitterKitEvent) {
+    listener = event.on { [weak self] i in
       self?.wasCalled = true
     }
   }
