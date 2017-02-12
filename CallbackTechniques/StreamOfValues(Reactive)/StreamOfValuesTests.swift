@@ -6,15 +6,35 @@
 //  Copyright © 2017 Alexey Naumov. All rights reserved.
 //
 
-class SwiftStreamOfValuesTests: XCTestCase {
+class SwiftRxSwiftTests: XCTestCase {
   
-  var callee: SwiftStreamOfValuesCallee!
-  var caller: SwiftStreamOfValuesCaller!
+  var callee: SwiftRxSwiftCallee!
+  var caller: SwiftRxSwiftCaller!
   
   override func setUp() {
     super.setUp()
-    callee = SwiftStreamOfValuesCallee()
-    caller = SwiftStreamOfValuesCaller()
+    callee = SwiftRxSwiftCallee()
+    caller = SwiftRxSwiftCaller()
+    callee.observe(stream: caller.stream)
+  }
+  
+  func testConnectivity() {
+    XCTAssertFalse(callee.wasCalled)
+    caller.generateEvent()
+    XCTAssertTrue(callee.wasCalled)
+  }
+}
+
+
+class SwiftReactiveSwiftTests: XCTestCase {
+  
+  var callee: SwiftReactiveSwiftCallee!
+  var caller: SwiftReactiveSwiftCaller!
+  
+  override func setUp() {
+    super.setUp()
+    callee = SwiftReactiveSwiftCallee()
+    caller = SwiftReactiveSwiftCaller()
     callee.observe(stream: caller.stream)
   }
   

@@ -300,10 +300,21 @@ extension PerformanceTestQueue {
   func measurePerformanceOfStreamOfValues(iterations: Int) -> PerformanceTestQueue {
     return self
       .enqueue { () -> PerformanceTest in
+        return PerformanceTest(title: "[Swift: RxSwift]", iterations: iterations)
+          .setup { () -> RunSyncTestClosure in
+            let callee = SwiftRxSwiftCallee()
+            let caller = SwiftRxSwiftCaller()
+            callee.observe(stream: caller.stream)
+            return { _ in
+              caller.generateEvent()
+            }
+          }
+      }
+      .enqueue { () -> PerformanceTest in
         return PerformanceTest(title: "[Swift: ReactiveSwift]", iterations: iterations)
           .setup { () -> RunSyncTestClosure in
-            let callee = SwiftStreamOfValuesCallee()
-            let caller = SwiftStreamOfValuesCaller()
+            let callee = SwiftReactiveSwiftCallee()
+            let caller = SwiftReactiveSwiftCaller()
             callee.observe(stream: caller.stream)
             return { _ in
               caller.generateEvent()

@@ -1,4 +1,5 @@
 github "mxcl/PromiseKit" ~> 4.0
 github "Thomvis/BrightFutures"
 github "ReactiveCocoa/ReactiveSwift" ~> 1.0
+github "ReactiveX/RxSwift" ~> 3.0
 github "artman/Signals" ~> 4.0
