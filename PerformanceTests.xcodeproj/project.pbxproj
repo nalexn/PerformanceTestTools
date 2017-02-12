@@ -45,6 +45,8 @@
 		F6BDBC8D1E451F59002FCE10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6BDBC8C1E451F59002FCE10 /* LaunchScreen.storyboard */; };
 		F6BE304A1E50F05F0066D141 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6BE30491E50F05F0066D141 /* RxSwift.framework */; };
 		F6BE304B1E50F0690066D141 /* RxSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F6BE30491E50F05F0066D141 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F6BE304D1E50F9570066D141 /* EmitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6BE304C1E50F9570066D141 /* EmitterKit.framework */; };
+		F6BE304E1E50F95E0066D141 /* EmitterKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F6BE304C1E50F9570066D141 /* EmitterKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F6F1157C1E41D5580014AA00 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F115791E41D5580014AA00 /* PromiseKit.framework */; };
 		F6F1157D1E41D5580014AA00 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F1157A1E41D5580014AA00 /* ReactiveSwift.framework */; };
 		F6F1157E1E41D5580014AA00 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F1157B1E41D5580014AA00 /* Result.framework */; };
@@ -70,6 +72,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				F6BE304E1E50F95E0066D141 /* EmitterKit.framework in CopyFiles */,
 				F6BE304B1E50F0690066D141 /* RxSwift.framework in CopyFiles */,
 				F62DDA191E50D839007F345A /* BrightFutures.framework in CopyFiles */,
 				F647DE021E4E6D0C00936169 /* Signals.framework in CopyFiles */,
@@ -128,6 +131,7 @@
 		F6AF87861E3E3C3700CA1E3B /* PerformanceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PerformanceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6BDBC8C1E451F59002FCE10 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F6BE30491E50F05F0066D141 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		F6BE304C1E50F9570066D141 /* EmitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EmitterKit.framework; path = Carthage/Build/iOS/EmitterKit.framework; sourceTree = "<group>"; };
 		F6E6EF421E3F74A3007A139C /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6F115791E41D5580014AA00 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PromiseKit.framework; path = Carthage/Build/iOS/PromiseKit.framework; sourceTree = "<group>"; };
 		F6F1157A1E41D5580014AA00 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
@@ -145,6 +149,7 @@
 				F647DE011E4E6CD200936169 /* Signals.framework in Frameworks */,
 				F62DDA181E50D829007F345A /* BrightFutures.framework in Frameworks */,
 				F6BE304A1E50F05F0066D141 /* RxSwift.framework in Frameworks */,
+				F6BE304D1E50F9570066D141 /* EmitterKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +449,7 @@
 		F6F115781E41D5580014AA00 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F6BE304C1E50F9570066D141 /* EmitterKit.framework */,
 				F6BE30491E50F05F0066D141 /* RxSwift.framework */,
 				F62DDA171E50D829007F345A /* BrightFutures.framework */,
 				F647DE001E4E6CD200936169 /* Signals.framework */,

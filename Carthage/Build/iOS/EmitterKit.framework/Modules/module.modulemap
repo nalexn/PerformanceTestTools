@@ -1,0 +1,6 @@
+framework module EmitterKit {
+  umbrella header "EmitterKit.h"
+
+  export *
+  module * { export * }
+}
