@@ -6,13 +6,13 @@
 //  Copyright © 2017 Alexey Naumov. All rights reserved.
 //
 
-class SwiftPromiseTests: XCTestCase {
+class SwiftPromiseKitTests: XCTestCase {
   
-  var caller: SwiftPromiseCaller!
+  var caller: SwiftPromiseKitCaller!
   
   override func setUp() {
     super.setUp()
-    caller = SwiftPromiseCaller()
+    caller = SwiftPromiseKitCaller()
   }
   
   func testConnectivity() {
@@ -22,6 +22,30 @@ class SwiftPromiseTests: XCTestCase {
       promiseExpectation.fulfill()
     }
     caller.fulfillPromise()
+    waitForExpectations(timeout: 0.1) { (error) in
+      if let error = error {
+        XCTFail(error.localizedDescription)
+      }
+    }
+  }
+}
+
+class SwiftBrightFuturesTests: XCTestCase {
+  
+  var caller: SwiftBrightFuturesCaller!
+  
+  override func setUp() {
+    super.setUp()
+    caller = SwiftBrightFuturesCaller()
+  }
+  
+  func testConnectivity() {
+    
+    let promiseExpectation = expectation(description: "Future")
+    _ = caller.provideFuture().andThen { _ in
+      promiseExpectation.fulfill()
+    }
+    caller.resolve()
     waitForExpectations(timeout: 0.1) { (error) in
       if let error = error {
         XCTFail(error.localizedDescription)

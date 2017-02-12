@@ -29,9 +29,9 @@ class CallbacksPerformanceTests: XCTestCase {
       .measurePerformanceOfInvocation(iterations: syncTestIterations)
       .measurePerformanceOfResponder(iterations: syncTestIterations)
       .measurePerformanceOfKeyValueObserving(iterations: syncTestIterations)
-      .measurePerformanceOfPromiseKit(iterations: asyncTestIterations)
-      .measurePerformanceOfSignals(iterations: syncTestIterations)
-      .measurePerformanceOfReactiveSwift(iterations: syncTestIterations)
+      .measurePerformanceOfPromisesAndFutures(iterations: asyncTestIterations)
+      .measurePerformanceOfEvents(iterations: syncTestIterations)
+      .measurePerformanceOfStreamOfValues(iterations: syncTestIterations)
       .finally {
         queueExpectation.fulfill()
       }
@@ -208,7 +208,7 @@ extension PerformanceTestQueue {
       }
   }
   
-  // MARK: - KeyValueObserving
+  // MARK: - Key Value Observing
   
   func measurePerformanceOfKeyValueObserving(iterations: Int) -> PerformanceTestQueue {
     return self
@@ -244,14 +244,14 @@ extension PerformanceTestQueue {
       }
   }
   
-  // MARK: - Promise
+  // MARK: - Promises and Futures
   
-  func measurePerformanceOfPromiseKit(iterations: Int) -> PerformanceTestQueue {
+  func measurePerformanceOfPromisesAndFutures(iterations: Int) -> PerformanceTestQueue {
     return self
       .enqueue { () -> PerformanceTest in
         return PerformanceTest(title: "[Swift: PromiseKit]", iterations: iterations)
           .setup { () -> RunAsyncTestClosure in
-            let caller = SwiftPromiseCaller()
+            let caller = SwiftPromiseKitCaller()
             var promiseFulfillment: VoidClosure!
             _ = caller.givePromise().then { _ in
               promiseFulfillment()
@@ -262,11 +262,25 @@ extension PerformanceTestQueue {
             }
           }
       }
+      .enqueue { () -> PerformanceTest in
+        return PerformanceTest(title: "[Swift: BrightFutures]", iterations: iterations)
+          .setup { () -> RunAsyncTestClosure in
+            let caller = SwiftBrightFuturesCaller()
+            var promiseFulfillment: VoidClosure!
+            _ = caller.provideFuture().andThen { _ in
+              promiseFulfillment()
+            }
+            return { completion -> Void in
+              promiseFulfillment = completion
+              caller.resolve()
+            }
+          }
+      }
   }
   
   // MARK: - Event
   
-  func measurePerformanceOfSignals(iterations: Int) -> PerformanceTestQueue {
+  func measurePerformanceOfEvents(iterations: Int) -> PerformanceTestQueue {
     return self
       .enqueue { () -> PerformanceTest in
         return PerformanceTest(title: "[Swift: Signals]", iterations: iterations)
@@ -283,7 +297,7 @@ extension PerformanceTestQueue {
   
   // MARK: - Stream of Values
   
-  func measurePerformanceOfReactiveSwift(iterations: Int) -> PerformanceTestQueue {
+  func measurePerformanceOfStreamOfValues(iterations: Int) -> PerformanceTestQueue {
     return self
       .enqueue { () -> PerformanceTest in
         return PerformanceTest(title: "[Swift: ReactiveSwift]", iterations: iterations)
