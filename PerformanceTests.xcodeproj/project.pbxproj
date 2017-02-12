@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F62DDA181E50D829007F345A /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F62DDA171E50D829007F345A /* BrightFutures.framework */; };
+		F62DDA191E50D839007F345A /* BrightFutures.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F62DDA171E50D829007F345A /* BrightFutures.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F647DDF71E4E680200936169 /* StreamOfValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = F647DDF51E4E680200936169 /* StreamOfValues.swift */; };
 		F647DDF81E4E680200936169 /* StreamOfValuesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F647DDF61E4E680200936169 /* StreamOfValuesTests.swift */; };
 		F647DE011E4E6CD200936169 /* Signals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F647DE001E4E6CD200936169 /* Signals.framework */; };
@@ -66,6 +68,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				F62DDA191E50D839007F345A /* BrightFutures.framework in CopyFiles */,
 				F647DE021E4E6D0C00936169 /* Signals.framework in CopyFiles */,
 				F6F115861E41EF690014AA00 /* PromiseKit.framework in CopyFiles */,
 				F6F115871E41EF690014AA00 /* ReactiveSwift.framework in CopyFiles */,
@@ -76,6 +79,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F62DDA171E50D829007F345A /* BrightFutures.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BrightFutures.framework; path = Carthage/Build/iOS/BrightFutures.framework; sourceTree = "<group>"; };
 		F647DDF51E4E680200936169 /* StreamOfValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamOfValues.swift; sourceTree = "<group>"; };
 		F647DDF61E4E680200936169 /* StreamOfValuesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamOfValuesTests.swift; sourceTree = "<group>"; };
 		F647DE001E4E6CD200936169 /* Signals.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Signals.framework; path = Carthage/Build/iOS/Signals.framework; sourceTree = "<group>"; };
@@ -135,6 +139,7 @@
 				F6F1157D1E41D5580014AA00 /* ReactiveSwift.framework in Frameworks */,
 				F6F1157E1E41D5580014AA00 /* Result.framework in Frameworks */,
 				F647DE011E4E6CD200936169 /* Signals.framework in Frameworks */,
+				F62DDA181E50D829007F345A /* BrightFutures.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +439,7 @@
 		F6F115781E41D5580014AA00 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F62DDA171E50D829007F345A /* BrightFutures.framework */,
 				F647DE001E4E6CD200936169 /* Signals.framework */,
 				F6F115791E41D5580014AA00 /* PromiseKit.framework */,
 				F6F1157A1E41D5580014AA00 /* ReactiveSwift.framework */,
