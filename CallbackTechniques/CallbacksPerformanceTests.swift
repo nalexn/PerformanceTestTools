@@ -29,6 +29,7 @@ class CallbacksPerformanceTests: XCTestCase {
       .measurePerformanceOfInvocation(iterations: syncTestIterations)
       .measurePerformanceOfResponder(iterations: syncTestIterations)
       .measurePerformanceOfKeyValueObserving(iterations: syncTestIterations)
+      .measurePerformanceOfTask(iterations: asyncTestIterations)
       .measurePerformanceOfPromisesAndFutures(iterations: asyncTestIterations)
       .measurePerformanceOfEvents(iterations: syncTestIterations)
       .measurePerformanceOfStreamOfValues(iterations: syncTestIterations)
@@ -240,6 +241,46 @@ extension PerformanceTestQueue {
               callee.stopObserving(caller)
             }
             return (test: test, tearDown: tearDown)
+          }
+      }
+  }
+  
+  // MARK: - Task
+  
+  func measurePerformanceOfTask(iterations: Int) -> PerformanceTestQueue {
+    return self
+      .enqueue { () -> PerformanceTest in
+        return PerformanceTest(title: "[Swift: NSOperation]", iterations: iterations)
+          .setup { () -> RunAsyncTestClosure in
+            let callee = SwiftOperationCallee()
+            let caller = SwiftOperationCaller()
+            let operationQueue = OperationQueue()
+            operationQueue.isSuspended = true
+            let callerOperation = caller.operation()
+            let calleeOperation = callee.operation(awaiting: callerOperation)
+            operationQueue.addOperation(calleeOperation)
+            operationQueue.addOperation(callerOperation)
+            return { completion -> Void in
+              calleeOperation.completionBlock = completion
+              operationQueue.isSuspended = false
+            }
+          }
+      }
+      .enqueue { () -> PerformanceTest in
+        return PerformanceTest(title: "[Obj-C: NSOperation]", iterations: iterations)
+          .setup { () -> RunAsyncTestClosure in
+            let callee = ObjCOperationCallee()
+            let caller = ObjCOperationCaller()
+            let operationQueue = OperationQueue()
+            operationQueue.isSuspended = true
+            let callerOperation = caller.operation()!
+            let calleeOperation = callee.operationAwaiting(callerOperation)!
+            operationQueue.addOperation(calleeOperation)
+            operationQueue.addOperation(callerOperation)
+            return { completion -> Void in
+              calleeOperation.completionBlock = completion
+              operationQueue.isSuspended = false
+            }
           }
       }
   }

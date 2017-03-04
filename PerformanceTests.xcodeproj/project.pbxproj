@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		F62DDA181E50D829007F345A /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F62DDA171E50D829007F345A /* BrightFutures.framework */; };
 		F62DDA191E50D839007F345A /* BrightFutures.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F62DDA171E50D829007F345A /* BrightFutures.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F6472DB81E6AE73B00C56779 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6472DB71E6AE73B00C56779 /* Task.swift */; };
+		F6472DBA1E6AE74600C56779 /* TaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6472DB91E6AE74600C56779 /* TaskTests.swift */; };
+		F6472DBE1E6AEBF700C56779 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = F6472DBD1E6AEBF700C56779 /* Task.m */; };
+		F6472DC01E6AEC0F00C56779 /* TaskTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6472DBF1E6AEC0F00C56779 /* TaskTests.m */; };
 		F647DDF71E4E680200936169 /* StreamOfValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = F647DDF51E4E680200936169 /* StreamOfValues.swift */; };
 		F647DDF81E4E680200936169 /* StreamOfValuesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F647DDF61E4E680200936169 /* StreamOfValuesTests.swift */; };
 		F647DE011E4E6CD200936169 /* Signals.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F647DE001E4E6CD200936169 /* Signals.framework */; };
@@ -86,6 +90,11 @@
 
 /* Begin PBXFileReference section */
 		F62DDA171E50D829007F345A /* BrightFutures.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BrightFutures.framework; path = Carthage/Build/iOS/BrightFutures.framework; sourceTree = "<group>"; };
+		F6472DB71E6AE73B00C56779 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		F6472DB91E6AE74600C56779 /* TaskTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskTests.swift; sourceTree = "<group>"; };
+		F6472DBC1E6AEBF700C56779 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
+		F6472DBD1E6AEBF700C56779 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
+		F6472DBF1E6AEC0F00C56779 /* TaskTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskTests.m; sourceTree = "<group>"; };
 		F647DDF51E4E680200936169 /* StreamOfValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamOfValues.swift; sourceTree = "<group>"; };
 		F647DDF61E4E680200936169 /* StreamOfValuesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamOfValuesTests.swift; sourceTree = "<group>"; };
 		F647DE001E4E6CD200936169 /* Signals.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Signals.framework; path = Carthage/Build/iOS/Signals.framework; sourceTree = "<group>"; };
@@ -163,6 +172,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F6472DB51E6AE71700C56779 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				F6472DBB1E6AEBE100C56779 /* Objective-C */,
+				F6472DB61E6AE72E00C56779 /* Swift */,
+			);
+			path = Task;
+			sourceTree = "<group>";
+		};
+		F6472DB61E6AE72E00C56779 /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				F6472DB71E6AE73B00C56779 /* Task.swift */,
+				F6472DB91E6AE74600C56779 /* TaskTests.swift */,
+			);
+			name = Swift;
+			sourceTree = "<group>";
+		};
+		F6472DBB1E6AEBE100C56779 /* Objective-C */ = {
+			isa = PBXGroup;
+			children = (
+				F6472DBC1E6AEBF700C56779 /* Task.h */,
+				F6472DBD1E6AEBF700C56779 /* Task.m */,
+				F6472DBF1E6AEC0F00C56779 /* TaskTests.m */,
+			);
+			name = "Objective-C";
+			sourceTree = "<group>";
+		};
 		F647DDF41E4E680200936169 /* StreamOfValues(Reactive) */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,6 +273,7 @@
 				F64CF9591E45166200776BA2 /* Invocation */,
 				F64CF9701E45166200776BA2 /* Responder */,
 				F64CF95D1E45166200776BA2 /* KeyValueObserving */,
+				F6472DB51E6AE71700C56779 /* Task */,
 				F64CF96A1E45166200776BA2 /* Promise */,
 				F647DE031E4F0D1E00936169 /* Event */,
 				F647DDF41E4E680200936169 /* StreamOfValues(Reactive) */,
@@ -575,17 +613,21 @@
 				F64CF9891E45166200776BA2 /* NotificationCenterTests.swift in Sources */,
 				F64CF9881E45166200776BA2 /* NotificationCenterTests.m in Sources */,
 				F64CF98B1E45166200776BA2 /* Promise.swift in Sources */,
+				F6472DC01E6AEC0F00C56779 /* TaskTests.m in Sources */,
 				F64CF9841E45166200776BA2 /* KeyValueObservingTests.m in Sources */,
 				F64CF9911E45166200776BA2 /* ResponderTests.m in Sources */,
 				F64CF97F1E45166200776BA2 /* DelegateTests.swift in Sources */,
 				F64CF97B1E45166200776BA2 /* ClosureTests.swift in Sources */,
+				F6472DBA1E6AE74600C56779 /* TaskTests.swift in Sources */,
 				F64CF9791E45166200776BA2 /* BlockTests.m in Sources */,
 				F64CF9801E45166200776BA2 /* Invocation.m in Sources */,
 				F64CF97A1E45166200776BA2 /* Closure.swift in Sources */,
 				F647DE061E4F0D1E00936169 /* Event.swift in Sources */,
 				F64CF98F1E45166200776BA2 /* Responder.m in Sources */,
 				F647DDF81E4E680200936169 /* StreamOfValuesTests.swift in Sources */,
+				F6472DB81E6AE73B00C56779 /* Task.swift in Sources */,
 				F647DE071E4F0D1E00936169 /* EventTests.swift in Sources */,
+				F6472DBE1E6AEBF700C56779 /* Task.m in Sources */,
 				F64CF9871E45166200776BA2 /* NotificationCenter.swift in Sources */,
 				F64CF9861E45166200776BA2 /* NotificationCenter.m in Sources */,
 				F64CF9851E45166200776BA2 /* KeyValueObservingTests.swift in Sources */,
