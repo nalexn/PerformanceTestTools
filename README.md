@@ -1,66 +1,16 @@
 # PerformanceTestTools
 
-Benchmarking tool for measuring performance of _sync_ and _async_ code in `Swift` or `Objective-C`.
+Benchmarking for standard callback techniques in Cocoa:
 
-## Why?
+* [Delegate, NotificationCenter, and KVO](https://nalexn.github.io/callbacks-part-1-delegation-notificationcenter-kvo/?utm_source=nalexn_github)
+* [Closure, Target-Action, and Responder chain](https://nalexn.github.io/callbacks-part-2-closure-target-action-responder-chain/?utm_source=nalexn_github)
 
-Because built-in `XCTest` performance measurer has very limited functionality.
-
-## Features over `XCTest.measure()`
-* async code performance measurements
-* ability to assert the maximum acceptable code execution time
-* multi-iterational measurements for better accuracy
-* export of results in your format
-
-It works with your favorite testing framework and doesn't bring in new dependencies.
-
-## Example maybe?
-
-``` swift
-let iterations = 50000
-
-// You define what to do with the results:
-let testCompletion = { (title: Any, iterations: Int, nanosec: TimeUnit) in
-  print("The average time for \(title) is \(nanosec)ns")
-  XCTAssert(nanosec < 1_000_000, "Expected the code to work faster!")
-}
-
-// Run tests in the queue:
-PerformanceTestQueue(testCompletion: testCompletion)
-  // Simple syncronous test
-  .enqueue { () -> PerformanceTest in
-    return PerformanceTest(title: "Sync Calculator", iterations: iterations)
-      .setup { () -> RunSyncTestClosure in
-        let sut = Calculator()
-        return { _ in
-          sut.performSyncComputations()
-        }
-      }
-  }
-  // Asyncronous test with tear down
-  .enqueue { () -> PerformanceTest in
-    return PerformanceTest(title: "Async Calculator", iterations: iterations)
-      .setup { () -> RunAsyncTestClosure in
-        let sut = Calculator()
-        let test: RunAsyncTestClosure = { completion -> Void in
-          sut.performAsyncComputations { _ -> Void in
-            completion()
-          }
-        }
-        let tearDown: TearDownClosure = { _ in
-          sut.cleanUp()
-        }
-        return (test: test, tearDown: tearDown)
-      }
-  }
-``` 
-
-See more examples in the `CallbacksPerformanceTests.swift` file where I benchmark different types of callbacks available in the `Cocoa` implemented in both `Swift` and `Objective-C`.
-
-## Integration
-
-Just copy the `PerformanceTestTools.swift` file to your test target.
-
-## License
-
-`PerformanceTestTools` is available under the MIT license. See the LICENSE file for more info.
+| Technique | Objective-C | Swift |
+|:---:|---|---|
+| Delegate | 46ns | 81ns |
+| NotificationCenter | 1470ns | 2002ns |
+| Closure | 120ns | 49ns |
+| Invocation | 238ns | - |
+| Responder | 1489ns | 1417ns |
+| KVO | 1016ns | 7572ns |
+| NSOperation | 23461ns | 24838ns |
