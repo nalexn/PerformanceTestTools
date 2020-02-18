@@ -21,7 +21,7 @@ class SwiftClosureCallee {
   var wasCalled = false
   
   func callback() -> TestClosure {
-    return { [weak self] _ in
+    return { [weak self] in
       self?.wasCalled = true
     }
   }

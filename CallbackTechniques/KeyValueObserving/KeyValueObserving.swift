@@ -6,28 +6,28 @@
 //  Copyright © 2017 Alexey Naumov. All rights reserved.
 //
 
+import Foundation
+
 class SwiftKeyValueObservingCallee : NSObject {
   
   var wasCalled = false
+  private var observation: NSKeyValueObservation?
   
-  func startObserving(object: NSObject) {
-    object.addObserver(self, forKeyPath: #keyPath(SwiftKeyValueObservingCaller.value), options: [.new], context: nil)
-  }
-  
-  func stopObserving(object: NSObject) {
-    object.removeObserver(self, forKeyPath: #keyPath(SwiftKeyValueObservingCaller.value))
-  }
-  
-  override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-    if #keyPath(SwiftKeyValueObservingCaller.value) == keyPath {
-      wasCalled = true
+  func startObserving(object: SwiftKeyValueObservingCaller) {
+    observation = object.observe(\.value, options: .new) { [weak self] (object, change) in
+        self?.wasCalled = true
     }
+  }
+  
+  func stopObserving(object: SwiftKeyValueObservingCaller) {
+    observation?.invalidate()
+    observation = nil
   }
 }
 
 class SwiftKeyValueObservingCaller : NSObject {
   
-  dynamic var value: CGFloat = 0
+  @objc dynamic var value: CGFloat = 0
   
   func changeValue() {
     value += 1

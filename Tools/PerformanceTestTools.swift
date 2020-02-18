@@ -112,8 +112,8 @@ class PerformanceTest {
   }
   
   func setup(syncTestSetup: @escaping SyncTestSetup) -> Self {
-    return setup(syncTestSetup: { _ in
-      return (test: syncTestSetup(), tearDown: { _ in })
+    return setup(syncTestSetup: {
+      return (test: syncTestSetup(), tearDown: { })
     })
   }
   
@@ -123,8 +123,8 @@ class PerformanceTest {
   }
   
   func setup(asyncTestSetup: @escaping AsyncTestSetup) -> Self {
-    return setup(asyncTestSetup: { _ in
-      return (test: asyncTestSetup(), tearDown: { _ in })
+    return setup(asyncTestSetup: {
+      return (test: asyncTestSetup(), tearDown: { })
     })
   }
   

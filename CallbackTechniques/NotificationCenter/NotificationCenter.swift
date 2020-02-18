@@ -28,7 +28,7 @@ class SwiftNotificationCenterCallee {
     NotificationCenter.default.removeObserver(self, name: NSNotification.Name.Test, object: nil)
   }
   
-  dynamic func handleNotification(notification: Notification) {
+  @objc func handleNotification(notification: Notification) {
     wasCalled = true
   }
 }

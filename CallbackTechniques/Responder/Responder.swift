@@ -10,7 +10,7 @@ class SwiftResponderCallee : UIView {
   
   var wasCalled = false
   
-  dynamic func handleAction(sender: AnyObject?) {
+    @objc dynamic func handleAction(sender: AnyObject?) {
     wasCalled = true
   }
 }

@@ -19,7 +19,7 @@ class SwiftOperationCallee {
   var wasCalled = false
   
   func operation(awaiting operationToWait: Operation) -> Operation {
-    let operation = BlockOperation(block: { [weak self] _ in
+    let operation = BlockOperation(block: { [weak self] in
       self?.wasCalled = true
     })
     operation.addDependency(operationToWait)

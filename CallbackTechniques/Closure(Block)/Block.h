@@ -6,7 +6,7 @@
 //  Copyright © 2017 Alexey Naumov. All rights reserved.
 //
 
-typedef void (^TestBlock)();
+typedef void (^TestBlock)(void);
 
 @interface ObjCBlockCaller : NSObject
 
